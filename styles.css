@@ -53,20 +53,18 @@ section h2 {
     color: #007bff;
 }
 
-/* Ajusta todas las imágenes de las secciones */
 section img {
-    max-width: 100%; /* La imagen no excederá el ancho del contenedor */
-    height: auto; /* Mantiene la proporción */
-    display: block; /* Evita espaciado extra */
-    margin: 10px auto; /* Centra la imagen horizontalmente */
-    border-radius: 5px; /* Bordes redondeados */
-    object-fit: contain; /* Asegura que la imagen se ajuste sin deformarse */
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+    border-radius: 5px;
+    object-fit: contain;
 }
 
-/* Opcional: Control de tamaño uniforme */
 section img {
-    width: 300px; /* Tamaño fijo para todas las imágenes */
-    height: auto; /* Mantén las proporciones */
+    width: 300px;
+    height: auto;
 }
 
 footer {
