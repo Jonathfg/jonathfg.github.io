@@ -53,11 +53,20 @@ section h2 {
     color: #007bff;
 }
 
+/* Ajusta todas las imágenes de las secciones */
 section img {
-    max-width: 100%;
-    height: auto;
-    margin: 10px 0;
-    border-radius: 5px;
+    max-width: 100%; /* La imagen no excederá el ancho del contenedor */
+    height: auto; /* Mantiene la proporción */
+    display: block; /* Evita espaciado extra */
+    margin: 10px auto; /* Centra la imagen horizontalmente */
+    border-radius: 5px; /* Bordes redondeados */
+    object-fit: contain; /* Asegura que la imagen se ajuste sin deformarse */
+}
+
+/* Opcional: Control de tamaño uniforme */
+section img {
+    width: 300px; /* Tamaño fijo para todas las imágenes */
+    height: auto; /* Mantén las proporciones */
 }
 
 footer {
