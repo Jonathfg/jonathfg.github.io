@@ -4,13 +4,13 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background-color: #f0f0f0;
+    background-color: #f8f9fa;
     color: #333;
 }
 
 /* Estilos para el encabezado */
 header {
-    background: #4CAF50;
+    background: #007bff;
     color: #fff;
     padding: 1rem;
     text-align: center;
@@ -19,19 +19,19 @@ header {
 /* Estilos para el título principal */
 header h1 {
     margin: 0;
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 /* Estilos para el menú de navegación */
 nav ul {
     list-style: none;
     padding: 0;
-    margin: 1rem 0 0 0;
+    margin: 0;
 }
 
 nav ul li {
     display: inline;
-    margin: 0 10px;
+    margin: 0 15px;
 }
 
 nav ul li a {
@@ -43,6 +43,7 @@ nav ul li a {
 /* Efecto al pasar el cursor sobre los enlaces del menú */
 nav ul li a:hover {
     text-decoration: underline;
+    color: #d4d4d4;
 }
 
 /* Estilos para el contenido principal */
@@ -62,7 +63,7 @@ section {
 
 /* Estilos para los títulos de las secciones */
 section h2 {
-    color: #4CAF50;
+    color: #007bff;
 }
 
 /* Estilos para las imágenes dentro de las secciones */
@@ -72,6 +73,7 @@ section img {
     display: block;
     margin: 10px auto;
     border-radius: 5px;
+    object-fit: contain;
 }
 
 /* Tamaño fijo para todas las imágenes */
@@ -84,7 +86,7 @@ section img {
 footer {
     text-align: center;
     padding: 10px 0;
-    background: #4CAF50;
+    background: #007bff;
     color: #fff;
     margin-top: 20px;
 }
