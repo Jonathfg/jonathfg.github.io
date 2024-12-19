@@ -1,15 +1,26 @@
-/* Estilos para las cajas de comando */
+/* Fuente y ajustes generales (aplicados en todo el documento) */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'VT323', monospace;
+  background: #0f0f1f;
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Bloque de código contenedor */
 .code-block {
   position: relative;
   margin: 1em 0;
-  background: #1e1e2f; /* Fondo oscuro, con un ligero tono azulado */
+  background: #1e1e2f; /* Fondo oscuro para el bloque */
   border: 1px solid #333;
   border-radius: 4px;
-  overflow: auto; /* Para scroll si el contenido es largo */
-  padding-top: 1.5em; /* Deja espacio para la "barra superior" */
+  overflow: auto;
+  padding-top: 1.5em; /* Espacio superior para el botón */
 }
 
-/* Estilo del botón "Copiar" */
+/* Botón "Copiar" en la esquina superior derecha */
 .copy-btn {
   position: absolute;
   top: 0.3em;
@@ -17,10 +28,11 @@
   background: #181830;
   color: #ffec27;
   border: 1px solid #444;
-  font-size: 0.8em;
+  font-size: 0.9em;
   padding: 0.3em 0.6em;
   cursor: pointer;
   border-radius: 3px;
+  text-transform: uppercase;
 }
 
 .copy-btn:hover {
@@ -28,23 +40,33 @@
   color: #181830;
 }
 
-/* Estilo del bloque de código */
+/* Estilo del código */
 .code-block pre {
   margin: 0;
   padding: 1em;
-  font-family: "Ubuntu Mono", monospace;
-  font-size: 0.95em;
+  font-family: 'VT323', monospace;
+  font-size: 1em;
   line-height: 1.4;
-  color: #00ff7f; /* Verde brillante para el texto del comando */
+  color: #00ff7f; /* Verde brillante */
   background: transparent;
+  white-space: pre;
 }
 
-/* El code en sí mismo no requiere cambio adicional, 
-   pero se puede ajustar si se quiere diferenciar el inline code 
-   dentro de esta sección */
-.code-block code {
-  background: transparent;
+/* Inline code dentro de bloques no necesita cambios, 
+   pero si hubiera inline code en texto normal, se podría adaptar:
+code {
+  background: none;
   color: #00ff7f;
-  padding: 0;
-  border: none;
+}*/
+
+/* Ajustes responsivos */
+@media (max-width: 600px) {
+  .copy-btn {
+    font-size: 0.8em;
+    padding: 0.2em 0.5em;
+  }
+
+  .code-block pre {
+    font-size: 0.9em;
+  }
 }
