@@ -19,7 +19,7 @@
           const text = codeBlock.innerText;
           navigator.clipboard.writeText(text).then(() => {
             btn.textContent = "Copiado!";
-            setTimeout(() => btn.textContent = "📋 Copiar", 1000);
+            setTimeout(() => btn.textContent = "Copiar", 1000);
           });
         });
       });
@@ -45,7 +45,7 @@
     <div class="hero-content">
       <span class="course-level">BEGINNER COURSE</span>
       <h1>Angular</h1>
-      <p class="hero-subtitle">Aprende a dominar Angular desde sus fundamentos. Este tutorial, con un estilo retro, te guiará paso a paso para que comprendas por qué Angular es tan poderoso, cómo instalarlo, crear tu primera aplicación, entender su funcionamiento interno y sacar conclusiones útiles para avanzar con solidez.</p>
+      <p class="hero-subtitle">Aprende a dominar Angular desde sus fundamentos. Este tutorial, con un estilo retro, te guiará paso a paso para que comprendas por qué Angular es tan poderoso, cómo instalarlo, crear tu primera aplicación, entender su funcionamiento interno y sacar conclusiones útiles para avanzar con solidez. Prepárate para llevar tus habilidades de desarrollo web al siguiente nivel.</p>
       <a href="#primeros-pasos" class="start-button">Empezar a hacer tu primera aplicación</a>
     </div>
   </header>
@@ -63,29 +63,31 @@
           <p><strong>¿Para qué sirve Angular?</strong><br>
           Angular es un framework para el desarrollo de aplicaciones web modernas de una sola página (SPA). Permite crear interfaces dinámicas, componentes reutilizables, manejar estados complejos y ofrecer experiencias de usuario fluidas sin recargar la página. Esto lo hace ideal para crear entornos más parecidos a aplicaciones de escritorio que a sitios web tradicionales.</p>
 
+          <p>Con Angular, la actualización de datos en la interfaz es inmediata. Cuando un usuario interactúa con el contenido, los componentes pueden cambiar su estado y reflejar los cambios sin necesidad de una recarga completa. Esta filosofía incrementa la eficiencia y la satisfacción del usuario.</p>
+
           <p><strong>¿Qué aplicaciones tiene?</strong><br>
           Angular se aplica en múltiples contextos:
           <ul>
-            <li>Paneles internos de administración y dashboards.</li>
-            <li>Aplicaciones de e-commerce con funcionalidades interactivas avanzadas.</li>
-            <li>Plataformas de aprendizaje en línea (LMS) con módulos dinámicos.</li>
-            <li>Aplicaciones móviles híbridas (con Ionic).</li>
-            <li>Sistemas empresariales complejos que requieren escalabilidad y mantenibilidad.</li>
+            <li>Paneles internos de administración y dashboards que requieren datos actualizados en tiempo real.</li>
+            <li>Aplicaciones de e-commerce con carritos dinámicos, filtros instantáneos y actualizaciones de stock sin recarga.</li>
+            <li>Plataformas de aprendizaje en línea (LMS) con módulos interactivos, evaluaciones y contenido que cambia según el progreso del alumno.</li>
+            <li>Aplicaciones móviles híbridas (con Ionic) que aprovechan la base de Angular para desplegar en móviles y web.</li>
+            <li>Sistemas empresariales complejos (ERP, CRM) que requieren escalabilidad, mantenibilidad y modularidad.</li>
           </ul>
           En definitiva, cualquier aplicación web que necesite experiencias ricas del lado del cliente se beneficia de Angular.</p>
 
           <p><strong>¿Sobre qué lenguajes se apoya?</strong><br>
-          Angular se basa principalmente en TypeScript (un superconjunto tipado de JavaScript) lo que facilita el mantenimiento. Para la vista, usa HTML y CSS. Así no necesitas un lenguaje nuevo para la presentación, sólo para la lógica. TypeScript te da tipado, autocompletado y verificación de tipos, integrándose perfectamente con JavaScript.</p>
+          Angular se basa principalmente en TypeScript (un superconjunto tipado de JavaScript). Esto facilita el mantenimiento, ya que el tipado estático ayuda a detectar errores temprano, ofrece mejor autocompletado y documentación interna. Para la vista, utiliza HTML y CSS, los lenguajes estándar de la web. Esto significa que no tienes que aprender un lenguaje de plantillas complejo; usas lo que ya conoces, enriquecido con directivas y bindings proporcionados por Angular.</p>
 
           <p><strong>¿Qué prerrequisitos necesita?</strong><br>
           Para empezar con Angular es ideal tener:
           <ul>
-            <li>Conocimientos básicos de HTML y CSS.</li>
-            <li>Familiaridad con JavaScript.</li>
-            <li>Disposición a aprender TypeScript (tipado, clases, interfaces).</li>
-            <li>Node.js y npm instalados para usar el CLI de Angular.</li>
+            <li><strong>HTML y CSS:</strong> Conocimientos básicos para construir la interfaz.</li>
+            <li><strong>JavaScript:</strong> Familiaridad con la programación del lado del cliente.</li>
+            <li><strong>TypeScript:</strong> Disposición a aprender su tipado, clases e interfaces. Es similar a JavaScript, pero con tipos, lo que reduce errores.</li>
+            <li><strong>Node.js y npm:</strong> Instalados para usar el CLI de Angular, gestionar dependencias y scripts.</li>
           </ul>
-          Con esto, podrás entrar con confianza en el mundo de Angular y aprovechar su potencial.</p>
+          Con esto, podrás entrar con confianza en el mundo de Angular y aprovechar su potencial, construyendo aplicaciones más limpias, mantenibles y escalables.</p>
         </div>
       </div>
 
@@ -97,34 +99,34 @@
         </div>
         <div class="chapter-body">
           <p><strong>¿Se precisa instalación?</strong><br>
-          Sí, necesitas Node.js, npm y el Angular CLI. El CLI simplifica mucho el flujo de trabajo: crear proyectos, generar componentes, servir la app en desarrollo y compilar para producción.</p>
+          Sí, necesitas Node.js, npm y el Angular CLI. El CLI simplifica la creación y mantenimiento de proyectos Angular: con comandos simples generas componentes, servicios y módulos, y levantas un servidor de desarrollo que se actualiza al instante con cada cambio.</p>
 
           <p><strong>Pasos para la instalación:</strong><br>
           Primero instala Angular CLI:
           <div class="code-block">
-            <button class="copy-btn">📋 Copiar</button>
+            <button class="copy-btn">Copiar</button>
             <pre><code>npm install -g @angular/cli
 ng version</code></pre>
           </div>
-          Con esto instalas el CLI globalmente y verificas la versión. Asegúrate de tener Node.js (versión LTS) para mayor compatibilidad.</p>
+          Con esto instalas el CLI globalmente y verificas la versión. Asegúrate de tener Node.js (versión LTS). El CLI también facilita la ejecución de pruebas, la generación de builds optimizados y el despliegue.</p>
 
           <p><strong>Versiones necesarias:</strong><br>
-          Usa la versión LTS de Node.js. Para Angular, la última versión estable es lo mejor para contar con documentación actualizada.</p>
+          Usa la versión LTS de Node.js para mayor estabilidad. Angular lanza versiones regularmente, pero empezar con la última versión estable es lo más aconsejable. Tendrás acceso a la documentación más reciente y la comunidad más activa.</p>
 
           <p><strong>Rutas a tener en cuenta:</strong><br>
           Al crear un proyecto con <code>ng new</code>:
           <ul>
-            <li><code>src/app</code>: Código principal (componentes, servicios, módulos).</li>
-            <li><code>src/assets</code>: Archivos estáticos (imágenes, fuentes).</li>
-            <li><code>src/environments</code>: Configuraciones para entornos (dev, prod).</li>
+            <li><code>src/app</code>: Código principal (componentes, servicios, módulos). Aquí ocurre la magia de tu aplicación.</li>
+            <li><code>src/assets</code>: Archivos estáticos (imágenes, fuentes). Tus recursos para estilos y contenido estático.</li>
+            <li><code>src/environments</code>: Configuraciones para entornos (dev, prod). Aquí puedes colocar endpoints distintos según el entorno.</li>
           </ul>
-          Esta organización facilita mantener un orden y escalabilidad.</p>
+          Esta organización facilita mantener orden y escalabilidad a medida que tu app crece.</p>
 
           <p><strong>Variables de entorno:</strong><br>
-          No obligatorias, pero útiles para configurar endpoints o claves según el entorno. La comunidad tiene patrones para esto, por ejemplo usando <code>environment.ts</code> y <code>environment.prod.ts</code>.</p>
+          No obligatorias, pero útiles para configurar endpoints (por ejemplo, una API distinta para desarrollo y otra para producción) o claves secretas. Aunque Angular no las maneja por defecto al estilo Node.js, puedes usar distintos archivos environment.ts o técnicas con Angular CLI para establecer ajustes.</p>
 
           <p><strong>¿Necesita base de datos?</strong><br>
-          No directamente. Angular es frontend. Para datos persistentes, se conecta a APIs. Puedes simular datos localmente, pero la lógica de persistencia corre en el backend.</p>
+          No directamente. Angular es frontend, se encarga de la vista y la lógica del cliente. La persistencia de datos ocurre en un backend (API REST, GraphQL u otros servicios). Angular se integra con esas APIs a través de HttpClient u otras librerías. Puedes simular datos localmente con JSON o librerías mock, pero la lógica persistente está fuera de Angular.</p>
         </div>
       </div>
 
@@ -138,7 +140,7 @@ ng version</code></pre>
           <p><strong>“Hola Mundo”:</strong><br>
           Crea un proyecto y ejecútalo en el servidor de desarrollo:
           <div class="code-block">
-            <button class="copy-btn">📋 Copiar</button>
+            <button class="copy-btn">Copiar</button>
             <pre><code>ng new mi-primera-app
 cd mi-primera-app
 ng serve --open
@@ -146,16 +148,22 @@ ng serve --open
           </div>
           Esto abre el navegador en <code>http://localhost:4200</code>. Edita <code>src/app/app.component.html</code>:
           <div class="code-block">
-            <button class="copy-btn">📋 Copiar</button>
+            <button class="copy-btn">Copiar</button>
             <pre><code>&lt;h1&gt;Hola Mundo desde Angular!&lt;/h1&gt;</code></pre>
           </div>
-          Verás el mensaje reflejado inmediatamente al guardar.</p>
+          Verás el mensaje reflejado inmediatamente al guardar. Este primer paso te confirma que el entorno está funcionando y que el CLI hizo su trabajo.</p>
 
-          <p>Explora la estructura: <code>app.module.ts</code> declara componentes y módulos; <code>app.component.ts</code> define el componente principal. Entender esta base te preparará para construir apps más complejas.</p>
+          <p>Explora la estructura del proyecto:
+          <ul>
+            <li><code>app.module.ts</code>: Declara componentes, módulos y servicios que tu app necesita para arrancar.</li>
+            <li><code>app.component.ts</code>: Define el componente principal (AppComponent), su lógica y propiedades.</li>
+            <li><code>app.component.html</code>: La plantilla del componente principal, donde muestras el “Hola Mundo”.</li>
+          </ul>
+          Entender esta base te preparará para construir apps más complejas: pronto crearás múltiples componentes y rutas para dividir tu aplicación en secciones más manejables.</p>
         </div>
       </div>
 
-      <!-- 4. Utilización del framework -->
+      <!-- 4. Utilización -->
       <div class="chapter" id="utilizacion">
         <div class="chapter-header">
           <span class="chapter-number">4</span>
@@ -163,34 +171,36 @@ ng serve --open
         </div>
         <div class="chapter-body">
           <p><strong>¿Cómo crear una aplicación base?</strong><br>
-          Genera componentes con el CLI:
+          Para expandir tu aplicación, genera componentes con el CLI:
           <div class="code-block">
-            <button class="copy-btn">📋 Copiar</button>
+            <button class="copy-btn">Copiar</button>
             <pre><code>ng generate component mi-componente</code></pre>
           </div>
-          Configura rutas:
+          Esto crea los archivos TS, HTML, CSS y el test del componente automáticamente. Configurar rutas es igual de sencillo:
           <div class="code-block">
-            <button class="copy-btn">📋 Copiar</button>
+            <button class="copy-btn">Copiar</button>
             <pre><code>ng generate module app-routing --flat --module=app</code></pre>
           </div>
-          Define rutas en <code>app-routing.module.ts</code> y asocia componentes a URLs. Así el usuario navega sin recargas completas.</p>
+          Define rutas en <code>app-routing.module.ts</code>, asociando rutas a componentes. Un usuario puede navegar entre secciones sin recargas, mejorando la experiencia.</p>
 
           <p><strong>¿Cómo visualizar resultados?</strong><br>
-          En desarrollo, levanta el servidor:
+          En desarrollo:
           <div class="code-block">
-            <button class="copy-btn">📋 Copiar</button>
+            <button class="copy-btn">Copiar</button>
             <pre><code>ng serve --open</code></pre>
           </div>
-          Cada vez que guardes, el navegador se actualiza. Para producción:
+          Al guardar cambios, el navegador se actualiza. Para producción:
           <div class="code-block">
-            <button class="copy-btn">📋 Copiar</button>
+            <button class="copy-btn">Copiar</button>
             <pre><code>ng build --configuration production</code></pre>
           </div>
-          Genera archivos estáticos en <code>dist/</code>. Despliega esos archivos en un hosting estático y tu app estará lista para el mundo.</p>
+          Esto genera archivos optimizados en <code>dist/</code>. Estos archivos puedes subirlos a un hosting estático (GitHub Pages, Netlify, etc.) y tu app estará lista para que cualquier usuario acceda. Así separas la etapa de desarrollo (con recarga en vivo) de la etapa de despliegue (archivos optimizados).</p>
+
+          <p>La utilización del framework sigue este patrón: CLI para tareas comunes, HTML+CSS+TS para la lógica y vistas, y un entorno flexible para crecer en complejidad a medida que lo necesites.</p>
         </div>
       </div>
 
-      <!-- 5. Explicación del funcionamiento -->
+      <!-- 5. Funcionamiento -->
       <div class="chapter" id="funcionamiento">
         <div class="chapter-header">
           <span class="chapter-number">5</span>
@@ -198,13 +208,19 @@ ng serve --open
         </div>
         <div class="chapter-body">
           <p><strong>¿Actúa sobre páginas, ficheros, secciones…?</strong><br>
-          Angular utiliza componentes. Cada componente tiene lógica (TS), plantilla (HTML) y estilos (CSS). Estos se agrupan en módulos. El enrutador carga componentes según la ruta, simulando páginas internas sin recarga completa, brindando una experiencia más rápida y fluida.</p>
+          Angular funciona con componentes. Cada componente tiene:
+          <ul>
+            <li>Un archivo TS con la clase del componente (propiedades, métodos, hooks del ciclo de vida).</li>
+            <li>Una plantilla HTML donde se definen vistas dinámicas.</li>
+            <li>Un archivo CSS (opcional) para estilos encapsulados.</li>
+          </ul>
+          Estos componentes se agrupan en módulos que organizan la app. El enrutador asigna cada ruta a un componente, simulando múltiples páginas internas sin recarga completa.</p>
 
           <p><strong>¿Cómo se editan/modifican los ficheros?</strong><br>
-          Abre el archivo TS del componente para agregar lógica o propiedades. Ajusta la vista en el HTML con data binding (<code>{{ variable }}</code>) y directivas (<code>*ngIf</code>, <code>*ngFor</code>) para mostrar datos dinámicos. Aplica estilos en el CSS. Guarda y listo, el servidor en vivo refleja los cambios.</p>
+          Ajusta la lógica en el TS (por ejemplo, agregando una propiedad <code>title</code>), luego muestra esa propiedad en el HTML con <code>{{ title }}</code>. Si necesitas mostrar una lista, usa <code>*ngFor</code>, y si requieres mostrar algo condicional, usa <code>*ngIf</code>. Los estilos en CSS se aplican solo a ese componente, evitando conflictos con otros.</p>
 
           <p><strong>¿Cómo se referencian los ficheros desde otras aplicaciones?</strong><br>
-          Una vez compilada, la app Angular es HTML, CSS y JS estático. Puedes integrarla en otro sitio vía un iframe o servirla en una ruta del servidor. Otras apps acceden a tu Angular app como a cualquier recurso web. No hay limitaciones especiales: la salida final de Angular es puro contenido web estático optimizado.</p>
+          Tras compilar, Angular produce HTML, JS y CSS estáticos. Otra aplicación puede consumir tu app servida en una URL específica, integrarla en un iframe o enlazarla en el menú principal. La salida final es puro web standard, sin dependencias de servidores especiales. Esto facilita la integración en entornos más complejos.</p>
         </div>
       </div>
 
@@ -217,13 +233,13 @@ ng serve --open
         <div class="chapter-body">
           <p>Has aprendido:
           <ul>
-            <li><strong>Justificación:</strong> Por qué Angular es valioso y en qué casos destaca.</li>
-            <li><strong>Instalación:</strong> Cómo preparar el entorno (Node.js, CLI) y entender la estructura del proyecto.</li>
-            <li><strong>Primeros pasos:</strong> Crear un proyecto, el “Hola Mundo” y la exploración básica.</li>
-            <li><strong>Utilización:</strong> Generar componentes, configurar rutas, ejecutar en desarrollo y compilar para producción.</li>
-            <li><strong>Funcionamiento:</strong> Comprender la arquitectura basada en componentes, módulos y enrutamiento, y la edición de cada parte.</li>
+            <li><strong>Justificación:</strong> Por qué Angular es valioso, en qué casos brilla (SPAs complejas, UIs ricas, escalabilidad).</li>
+            <li><strong>Instalación:</strong> Preparar el entorno con Node.js, CLI y entender la estructura clara de los proyectos Angular.</li>
+            <li><strong>Primeros pasos:</strong> Crear un proyecto, mostrar “Hola Mundo” y examinar la arquitectura básica.</li>
+            <li><strong>Utilización:</strong> Generar componentes, configurar rutas, ejecutar en modo desarrollo, compilar para producción y desplegar sin complicaciones.</li>
+            <li><strong>Funcionamiento:</strong> Entender el modelo de componentes, módulos y enrutamiento interno, así como la edición de cada parte para construir UIs dinámicas y mantenibles.</li>
           </ul>
-          Con estas bases, estás listo para el siguiente nivel. Angular ofrece muchas más herramientas (consumo de APIs, pruebas, despliegue, optimización, internacionalización, accesibilidad, animaciones...) para crear aplicaciones web potentes y mantenibles.</p>
+          Con estas bases, estás listo para profundizar en temas avanzados: consumir APIs externas, escribir pruebas unitarias y E2E, optimizar rendimiento, aplicar internacionalización, mejorar accesibilidad, agregar animaciones e integrar librerías de terceros. Angular es una potente herramienta en tu arsenal de desarrollador web moderno, y ahora tienes la base para aprovecharla al máximo.</p>
         </div>
       </div>
 
