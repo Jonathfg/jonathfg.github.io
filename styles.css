@@ -1,200 +1,26 @@
-html, body {
-  margin: 0;
-  padding: 0;
-  background: #0f0f1f;
-  color: #fff;
-  font-family: 'VT323', monospace;
-  font-size: 14px;
-  line-height: 1.8;
-  letter-spacing: 0.5px;
-}
-
-a {
-  text-decoration: none;
-  color: #73dfff;
-}
-
-a:hover {
-  color: #ffec27;
-}
-
-/* Barra superior fija */
-.top-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1em;
-  background: #181830;
-  border-bottom: 2px solid #444;
-  position: sticky;
-  top: 0;
-  z-index: 999;
-}
-
-.logo .brand {
-  color: #ffec27;
-  font-size: 1em;
-}
-
-.main-menu {
-  list-style: none;
-  display: flex;
-  gap: 1em;
-  flex-wrap: wrap;
-}
-
-.main-menu li a {
-  color: #ddd;
-  font-size: 0.85em;
-}
-
-.main-menu li a:hover {
-  color: #ffec27;
-}
-
-.hero-section {
-  background: url('https://cdn.pixilart.com/photos/large/8bd663a45f90970.png') no-repeat center center;
-  background-size: cover;
-  border-bottom: 2px solid #444;
-  position: relative;
-}
-
-.hero-content {
-  text-align: center;
-  padding: 4em 1em 2em;
-  background: rgba(0,0,0,0.5);
-}
-
-.course-level {
-  display: inline-block;
-  background: #181830;
-  padding: 0.3em 0.6em;
-  color: #73dfff;
-  font-size: 0.8em;
-  margin-bottom: 1em;
-}
-
-.hero-content h1 {
-  margin: 0.3em 0;
-  font-size: 2em;
-  color: #ffec27;
-  text-shadow: 0 0 5px #ffec27;
-}
-
-.hero-subtitle {
-  color: #ccc;
-  font-size: 0.9em;
-  margin-bottom: 2em;
-  max-width: 600px;
-  margin: 0 auto 2em;
-  letter-spacing: 0.5px;
-}
-
-.start-button {
-  background: #ffec27;
-  color: #181830;
-  padding: 0.8em 1.2em;
-  border: none;
-  cursor: pointer;
-  font-size: 0.85em;
-  display: inline-block;
-}
-
-.start-button:hover {
-  background: #e5d300;
-}
-
-.main-container {
-  max-width: 1200px;
-  margin: 2em auto;
-  padding: 0 1em;
-}
-
-.course-content {
-  flex: 1;
-}
-
-.chapter {
-  background: #181830;
-  margin-bottom: 2em;
-  padding: 1.5em;
-  border: 1px solid #333;
-}
-
-.chapter-header {
-  display: flex;
-  align-items: center;
-  gap: 1em;
-  margin-bottom: 1em;
-}
-
-.chapter-number {
-  background: #0f0f1f;
-  border: 2px solid #333;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  color: #ffec27;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.8em;
-}
-
-.chapter-header h2 {
-  font-size: 1em;
-  color: #fff;
-  margin: 0;
-}
-
-.chapter-body p {
-  font-size: 0.9em;
-  color: #ccc;
-  margin-bottom: 1.2em;
-  letter-spacing: 0.5px;
-}
-
-.chapter-body ul {
-  margin-left: 1.5em;
-  list-style: disc;
-  margin-bottom: 1.2em;
-}
-
+/* Estilos para las cajas de comando */
 .code-block {
   position: relative;
   margin: 1em 0;
-  background: #1e1e2f;
+  background: #1e1e2f; /* Fondo oscuro, con un ligero tono azulado */
   border: 1px solid #333;
-  padding: 1em;
-  overflow: auto;
+  border-radius: 4px;
+  overflow: auto; /* Para scroll si el contenido es largo */
+  padding-top: 1.5em; /* Deja espacio para la "barra superior" */
 }
 
-.code-block pre {
-  margin: 0;
-  line-height: 1.6;
-}
-
-.code-block code {
-  background: transparent;
-  color: #00ff7f;
-  font-family: monospace;
-  font-size: 0.95em;
-  letter-spacing: normal;
-  box-shadow: none;
-  padding: 0;
-  border: none;
-}
-
+/* Estilo del botón "Copiar" */
 .copy-btn {
   position: absolute;
-  top: 0.5em;
-  right: 0.5em;
+  top: 0.3em;
+  right: 0.3em;
   background: #181830;
   color: #ffec27;
   border: 1px solid #444;
   font-size: 0.8em;
   padding: 0.3em 0.6em;
   cursor: pointer;
+  border-radius: 3px;
 }
 
 .copy-btn:hover {
@@ -202,23 +28,23 @@ a:hover {
   color: #181830;
 }
 
-.retro-footer {
-  text-align: center;
+/* Estilo del bloque de código */
+.code-block pre {
+  margin: 0;
   padding: 1em;
-  background: #181830;
-  color: #aaa;
-  border-top: 1px solid #444;
-  font-size: 0.7em;
-  margin-top: 2em;
-  letter-spacing: 0.5px;
+  font-family: "Ubuntu Mono", monospace;
+  font-size: 0.95em;
+  line-height: 1.4;
+  color: #00ff7f; /* Verde brillante para el texto del comando */
+  background: transparent;
 }
 
-@media (max-width: 800px) {
-  .main-menu {
-    justify-content: center;
-  }
-
-  .hero-subtitle {
-    font-size: 0.8em;
-  }
+/* El code en sí mismo no requiere cambio adicional, 
+   pero se puede ajustar si se quiere diferenciar el inline code 
+   dentro de esta sección */
+.code-block code {
+  background: transparent;
+  color: #00ff7f;
+  padding: 0;
+  border: none;
 }
