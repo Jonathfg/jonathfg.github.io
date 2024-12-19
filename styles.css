@@ -5,6 +5,7 @@ html, body {
   color: #fff;
   font-family: 'Press Start 2P', cursive;
   font-size: 14px;
+  line-height: 1.6; /* Mejor line-height para legibilidad */
 }
 
 a {
@@ -43,20 +44,6 @@ a:hover {
   color: #ffec27;
 }
 
-.sign-up-btn {
-  background: #181830;
-  color: #ffec27;
-  border: 1px solid #ffec27;
-  padding: 0.5em 1em;
-  cursor: pointer;
-  font-size: 0.7em;
-}
-
-.sign-up-btn:hover {
-  background: #ffec27;
-  color: #181830;
-}
-
 .hero-section {
   background: url('https://cdn.pixilart.com/photos/large/8bd663a45f90970.png') no-repeat center center;
   background-size: cover;
@@ -90,6 +77,8 @@ a:hover {
   color: #ccc;
   font-size: 0.8em;
   margin-bottom: 2em;
+  max-width: 600px;
+  margin: 0 auto 2em;
 }
 
 .start-button {
@@ -147,6 +136,7 @@ a:hover {
 .chapter-header h2 {
   font-size: 1em;
   color: #fff;
+  margin: 0;
 }
 
 .chapter-body p {
@@ -155,52 +145,17 @@ a:hover {
   margin-bottom: 1em;
 }
 
-.exercises {
-  background: #0f0f1f;
-  border: 1px solid #333;
-  padding: 1em;
-  margin-bottom: 1em;
-}
-
-.exercise {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 0.8em;
-  margin-bottom: 0.5em;
-  color: #ddd;
-}
-
-.exercise .exercise-title {
-  margin-right: 1em;
-  color: #73dfff;
-}
-
-.start-exercise {
+.next-chapter-btn {
   background: #73dfff;
-  color: #0f0f1f;
   border: none;
-  padding: 0.3em 0.5em;
+  color: #0f0f1f;
+  padding: 0.5em 1em;
+  font-size: 0.7em;
   cursor: pointer;
-  font-size: 0.7em;
 }
 
-.start-exercise:hover {
+.next-chapter-btn:hover {
   background: #5ac0e6;
-}
-
-.exercise.locked .locked-icon {
-  background: #333;
-  color: #666;
-  padding: 0.3em;
-  border-radius: 2px;
-}
-
-.bonus {
-  font-size: 0.7em;
-  color: #bbb;
-  display: flex;
-  justify-content: space-between;
 }
 
 .sidebar {
@@ -230,6 +185,7 @@ a:hover {
   display: block;
   color: #ffec27;
   font-size: 0.9em;
+  margin-bottom: 0.3em;
 }
 
 .user-level {
@@ -244,6 +200,7 @@ a:hover {
   padding: 0.5em 1em;
   font-size: 0.7em;
   cursor: pointer;
+  margin-top: 0.5em;
 }
 
 .view-profile:hover {
@@ -261,6 +218,22 @@ a:hover {
   font-size: 0.8em;
   margin-bottom: 1em;
   color: #73dfff;
+}
+
+.progress-scroll {
+  max-height: 120px;
+  overflow-y: auto;
+  border: 1px solid #333;
+  padding: 0.5em;
+  background: #0f0f1f;
+}
+
+.progress-scroll p {
+  margin-bottom: 1em;
+}
+
+.course-badges p {
+  margin-bottom: 1em;
 }
 
 .badges-grid {
@@ -294,5 +267,8 @@ a:hover {
 @media (max-width: 800px) {
   .main-container {
     flex-direction: column;
+  }
+  .sidebar {
+    order: -1;
   }
 }
