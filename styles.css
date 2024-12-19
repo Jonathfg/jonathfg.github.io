@@ -1,96 +1,112 @@
-/* Estilos generales para todo el cuerpo de la página */
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    background-color: #f0f0f0;
-    color: #333;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: #f7f7f7;
+  color: #333;
 }
 
-/* Estilos para el encabezado */
 header {
-    background: #ff5733;
-    color: #fff;
-    padding: 1rem;
-    text-align: center;
+  background: #1976d2;
+  color: #fff;
+  padding: 2em;
+  text-align: center;
 }
 
-/* Estilos para el título principal */
-header h1 {
-    margin: 0;
-    font-size: 2.5rem;
+.subtitle {
+  font-size: 1.2em;
+  margin: 0.5em 0 0;
 }
 
-/* Estilos para el menú de navegación */
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 1rem 0 0 0;
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 240px;
+  background: #ffffff;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  padding: 2em 1em;
+  overflow-y: auto;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 10px;
+.sidebar h2 {
+  font-size: 1.2em;
+  margin-top: 0;
 }
 
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
+.sidebar ul {
+  list-style: none;
+  padding: 0;
 }
 
-/* Efecto al pasar el cursor sobre los enlaces del menú */
-nav ul li a:hover {
-    text-decoration: underline;
-    color: #ffd1a9;
+.sidebar ul li {
+  margin: 0.7em 0;
 }
 
-/* Estilos para el contenido principal */
+.sidebar a {
+  text-decoration: none;
+  color: #1976d2;
+  font-weight: 400;
+}
+
+.sidebar a:hover {
+  text-decoration: underline;
+}
+
 main {
-    padding: 20px;
+  margin-left: 260px;
+  padding: 2em;
 }
 
-/* Estilos para cada sección del blog */
-section {
-    background: #fff;
-    margin-bottom: 20px;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+main h2 {
+  border-bottom: 2px solid #1976d2;
+  padding-bottom: 0.3em;
+  margin-top: 2em;
+  font-size: 1.5em;
 }
 
-/* Estilos para los títulos de las secciones */
-section h2 {
-    color: #ff5733;
+main h3 {
+  margin-top: 1.5em;
+  font-weight: 700;
+  color: #1976d2;
 }
 
-/* Estilos para las imágenes dentro de las secciones */
-section img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 10px auto;
-    border-radius: 5px;
+p, li {
+  line-height: 1.6em;
 }
 
-/* Tamaño fijo para todas las imágenes */
-section img {
-    width: 300px;
-    height: auto;
+pre, code {
+  background: #eee;
+  padding: 0.5em;
+  display: block;
+  margin: 1em 0;
+  overflow-x: auto;
+  font-size: 0.9em;
 }
 
-/* Estilos para el pie de página */
 footer {
-    text-align: center;
-    padding: 10px 0;
-    background: #ff5733;
-    color: #fff;
-    margin-top: 20px;
+  text-align: center;
+  padding: 1em;
+  background: #fafafa;
+  margin-top: 4em;
+  font-size: 0.9em;
+  color: #666;
 }
 
-footer a {
-    color: #fff;
-    text-decoration: underline;
+article ul {
+  margin-left: 1.5em;
+  list-style: disc;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+    box-shadow: none;
+  }
+
+  main {
+    margin: 0;
+    padding: 1em;
+  }
 }
