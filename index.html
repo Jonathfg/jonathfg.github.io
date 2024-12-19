@@ -11,8 +11,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
   <script>
-    // Simulación de desbloquear capítulos con el botón "Siguiente"
-    // Aquí simplemente se muestra un alert. Podrías implementar lógica real.
     function siguienteCapitulo(num) {
       alert("Capítulo " + num + " completado. ¡Desbloqueando el siguiente!");
     }
@@ -22,25 +20,44 @@
   <header class="hero-section">
     <nav class="top-nav">
       <div class="logo">
-        <span class="brand">Angular Retro</span>
+        <a href="#" class="brand">Angular Retro</a>
       </div>
       <ul class="main-menu">
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Tutorial</a></li>
+        <li><a href="#justificacion">Justificación</a></li>
+        <li><a href="#instalacion">Instalación</a></li>
+        <li><a href="#primeros-pasos">Primeros pasos</a></li>
+        <li><a href="#utilizacion">Utilización</a></li>
+        <li><a href="#funcionamiento">Funcionamiento</a></li>
+        <li><a href="#conclusiones">Conclusiones</a></li>
+        <li><a href="#enrutamiento">Enrutamiento</a></li>
+        <li><a href="#consumo-apis">Consumo de APIs</a></li>
+        <li><a href="#modulos-lazy">Módulos y Lazy Loading</a></li>
+        <li><a href="#directivas-pipes">Directivas y Pipes</a></li>
+        <li><a href="#pruebas">Pruebas</a></li>
+        <li><a href="#despliegue">Despliegue</a></li>
+        <li><a href="#seguridad">Seguridad</a></li>
+        <li><a href="#seo">SEO</a></li>
+        <li><a href="#internacionalizacion">Internacionalización</a></li>
+        <li><a href="#rendimiento">Rendimiento</a></li>
+        <li><a href="#accesibilidad">Accesibilidad</a></li>
+        <li><a href="#gestion-estado">Gestión de Estado</a></li>
+        <li><a href="#animaciones">Animaciones</a></li>
+        <li><a href="#herramientas">Herramientas</a></li>
       </ul>
     </nav>
     <div class="hero-content">
       <span class="course-level">BEGINNER COURSE</span>
       <h1>Angular</h1>
       <p class="hero-subtitle">Aprende a dominar Angular desde los fundamentos hasta conceptos avanzados, con un toque retro.</p>
-      <button class="start-button">Comenzar el Tutorial</button>
+      <!-- El botón ahora lleva a la sección #primeros-pasos (capítulo 3) -->
+      <a href="#primeros-pasos" class="start-button">Empezar a hacer tu primera aplicación</a>
     </div>
   </header>
 
   <div class="main-container">
     <div class="course-content">
       <!-- Capítulo 1: Justificación del framework -->
-      <div class="chapter">
+      <div class="chapter" id="justificacion">
         <div class="chapter-header">
           <span class="chapter-number">1</span>
           <h2>Justificación del Framework</h2>
@@ -55,7 +72,7 @@
       </div>
 
       <!-- Capítulo 2: Instalación -->
-      <div class="chapter">
+      <div class="chapter" id="instalacion">
         <div class="chapter-header">
           <span class="chapter-number">2</span>
           <h2>Instalación</h2>
@@ -65,14 +82,14 @@
           <p><strong>Pasos para la instalación:</strong> <code>npm install -g @angular/cli</code>, verifica con <code>ng version</code>.</p>
           <p><strong>Versiones necesarias:</strong> Usa la versión LTS de Node.js y la última versión estable de Angular.</p>
           <p><strong>Rutas a tener en cuenta:</strong> <code>src/app</code> para componentes, <code>src/assets</code> para estáticos, <code>src/environments</code> para configuraciones.</p>
-          <p><strong>Variables de entorno:</strong> No obligatorias, pero puedes usarlas para endpoints u otras configuraciones.</p>
+          <p><strong>Variables de entorno:</strong> No obligatorias, pero útiles para endpoints u otras configuraciones.</p>
           <p><strong>¿Necesita base de datos?</strong> No directamente, Angular consume APIs externas.</p>
         </div>
         <button class="next-chapter-btn" onclick="siguienteCapitulo(2)">Siguiente</button>
       </div>
 
       <!-- Capítulo 3: Primeros pasos -->
-      <div class="chapter">
+      <div class="chapter" id="primeros-pasos">
         <div class="chapter-header">
           <span class="chapter-number">3</span>
           <h2>Primeros pasos</h2>
@@ -84,237 +101,199 @@
       </div>
 
       <!-- Capítulo 4: Utilización del framework -->
-      <div class="chapter">
+      <div class="chapter" id="utilizacion">
         <div class="chapter-header">
           <span class="chapter-number">4</span>
           <h2>Utilización del Framework</h2>
         </div>
         <div class="chapter-body">
-          <p><strong>¿Cómo crear una aplicación base?</strong> Usa componentes generados con CLI, define rutas, servicios y vistas.</p>
-          <p><strong>¿Cómo visualizar resultados?</strong> Con <code>ng serve</code> en <code>http://localhost:4200</code>, con recarga en vivo. Para producción, <code>ng build --configuration production</code>.</p>
+          <p><strong>¿Cómo crear una aplicación base?</strong> Usa componentes generados con la CLI, define rutas, servicios y vistas.</p>
+          <p><strong>¿Cómo visualizar resultados?</strong> Con <code>ng serve</code> en <code>http://localhost:4200</code> con recarga en vivo. Para producción, <code>ng build --configuration production</code>.</p>
         </div>
         <button class="next-chapter-btn" onclick="siguienteCapitulo(4)">Siguiente</button>
       </div>
 
       <!-- Capítulo 5: Explicación del funcionamiento -->
-      <div class="chapter">
+      <div class="chapter" id="funcionamiento">
         <div class="chapter-header">
           <span class="chapter-number">5</span>
-          <h2>Explicación del Funcionamiento</h2>
+          <h2>Funcionamiento Interno</h2>
         </div>
         <div class="chapter-body">
-          <p><strong>¿Actúa sobre páginas, ficheros, secciones…?</strong> Angular actúa sobre componentes (HTML, TS, CSS), organizados en módulos. El enrutador simula múltiples páginas sin recarga completa.</p>
-          <p><strong>¿Cómo se editan los ficheros?</strong> Cada componente tiene su TS, HTML y CSS. Usa data binding y directivas para lógica y vistas dinámicas.</p>
-          <p><strong>¿Cómo se referencian ficheros desde otras apps?</strong> Normalmente se despliega la app Angular como estáticos. Otras apps pueden consumir el frontend final, o integrarlo vía proxies.</p>
+          <p><strong>¿Actúa sobre páginas, ficheros, secciones…?</strong> Angular actúa sobre componentes organizados en módulos. El enrutador simula múltiples páginas sin recarga.</p>
+          <p><strong>¿Cómo se editan los ficheros?</strong> Cada componente tiene su archivo TS, HTML y CSS. Usa data binding, directivas, pipes y servicios.</p>
+          <p><strong>¿Cómo se referencian ficheros desde otras apps?</strong> Normalmente despliegas la app Angular como estáticos; otras apps pueden consumirla vía proxies o iframes.</p>
         </div>
         <button class="next-chapter-btn" onclick="siguienteCapitulo(5)">Siguiente</button>
       </div>
 
       <!-- Capítulo 6: Conclusiones -->
-      <div class="chapter">
+      <div class="chapter" id="conclusiones">
         <div class="chapter-header">
           <span class="chapter-number">6</span>
           <h2>Conclusiones</h2>
         </div>
         <div class="chapter-body">
-          <p>Se han cubierto los fundamentos: justificación, instalación, primeros pasos, uso general, funcionamiento interno y conclusiones. Ahora tienes las bases para abordar temas más avanzados de Angular.</p>
+          <p>Con estas bases, has conocido la justificación de Angular, cómo instalarlo, crear tu primer “Hola Mundo”, utilizar el framework, entender su funcionamiento interno y las conclusiones iniciales. Estás listo para temas más avanzados.</p>
         </div>
         <button class="next-chapter-btn" onclick="siguienteCapitulo(6)">Siguiente</button>
       </div>
 
-      <!-- Apartados adicionales para llegar a 20 -->
-      <div class="chapter">
+      <!-- Resto de capítulos (7 a 20) -->
+      <div class="chapter" id="enrutamiento">
         <div class="chapter-header">
           <span class="chapter-number">7</span>
           <h2>Enrutamiento</h2>
         </div>
         <div class="chapter-body">
-          <p>Aprende a configurar rutas, loadChildren para lazy loading, guards y navegación entre componentes.</p>
+          <p>Aprende a configurar rutas, lazy loading y guards.</p>
         </div>
         <button class="next-chapter-btn" onclick="siguienteCapitulo(7)">Siguiente</button>
       </div>
 
-      <div class="chapter">
+      <div class="chapter" id="consumo-apis">
         <div class="chapter-header">
           <span class="chapter-number">8</span>
           <h2>Consumo de APIs</h2>
         </div>
         <div class="chapter-body">
-          <p>Usa <code>HttpClient</code> para peticiones REST, interceptors para token, manejo de errores y mostrar datos dinámicos.</p>
+          <p>Usa <code>HttpClient</code>, interceptors y manejo de errores para consumir APIs.</p>
         </div>
         <button class="next-chapter-btn" onclick="siguienteCapitulo(8)">Siguiente</button>
       </div>
 
-      <div class="chapter">
+      <div class="chapter" id="modulos-lazy">
         <div class="chapter-header">
           <span class="chapter-number">9</span>
           <h2>Módulos y Lazy Loading</h2>
         </div>
         <div class="chapter-body">
-          <p>Organiza tu app en módulos. Aplica lazy loading para cargar módulos a demanda y optimizar el rendimiento inicial.</p>
+          <p>Organiza tu app en módulos y usa lazy loading para optimizar la carga.</p>
         </div>
         <button class="next-chapter-btn" onclick="siguienteCapitulo(9)">Siguiente</button>
       </div>
 
-      <div class="chapter">
+      <div class="chapter" id="directivas-pipes">
         <div class="chapter-header">
           <span class="chapter-number">10</span>
           <h2>Directivas y Pipes</h2>
         </div>
         <div class="chapter-body">
-          <p>Crea directivas personalizadas para manipular el DOM y pipes para transformar datos en las vistas.</p>
+          <p>Crea directivas personalizadas y pipes para transformar datos en vistas.</p>
         </div>
         <button class="next-chapter-btn" onclick="siguienteCapitulo(10)">Siguiente</button>
       </div>
 
-      <div class="chapter">
+      <div class="chapter" id="pruebas">
         <div class="chapter-header">
           <span class="chapter-number">11</span>
-          <h2>Pruebas (Testing)</h2>
+          <h2>Pruebas</h2>
         </div>
         <div class="chapter-body">
-          <p>Escribe pruebas unitarias con Jasmine y Karma, y pruebas E2E con Protractor, asegurando calidad y fiabilidad.</p>
+          <p>Pruebas unitarias con Jasmine/Karma y E2E con Protractor.</p>
         </div>
         <button class="next-chapter-btn" onclick="siguienteCapitulo(11)">Siguiente</button>
       </div>
 
-      <div class="chapter">
+      <div class="chapter" id="despliegue">
         <div class="chapter-header">
           <span class="chapter-number">12</span>
           <h2>Despliegue</h2>
         </div>
         <div class="chapter-body">
-          <p>Construye la app para producción con <code>ng build</code> y sube los archivos a un hosting estático o CDN.</p>
+          <p>Compila con <code>ng build</code> y sube los estáticos a un hosting.</p>
         </div>
         <button class="next-chapter-btn" onclick="siguienteCapitulo(12)">Siguiente</button>
       </div>
 
-      <div class="chapter">
+      <div class="chapter" id="seguridad">
         <div class="chapter-header">
           <span class="chapter-number">13</span>
-          <h2>Seguridad y Autenticación</h2>
+          <h2>Seguridad</h2>
         </div>
         <div class="chapter-body">
-          <p>Implementa autenticación, JWT, guards de ruta y medidas contra XSS e inyecciones.</p>
+          <p>Autenticación, JWT, guards y protección contra ataques XSS.</p>
         </div>
         <button class="next-chapter-btn" onclick="siguienteCapitulo(13)">Siguiente</button>
       </div>
 
-      <div class="chapter">
+      <div class="chapter" id="seo">
         <div class="chapter-header">
           <span class="chapter-number">14</span>
-          <h2>SEO y Metadatos</h2>
+          <h2>SEO</h2>
         </div>
         <div class="chapter-body">
-          <p>Usa Angular Universal para SSR, añade metadatos, Open Graph, microdatos y mejora el SEO de tu app.</p>
+          <p>Angular Universal, metadatos y Open Graph para mejorar SEO.</p>
         </div>
         <button class="next-chapter-btn" onclick="siguienteCapitulo(14)">Siguiente</button>
       </div>
 
-      <div class="chapter">
+      <div class="chapter" id="internacionalizacion">
         <div class="chapter-header">
           <span class="chapter-number">15</span>
           <h2>Internacionalización</h2>
         </div>
         <div class="chapter-body">
-          <p>Traduce tu app a varios idiomas con <code>@angular/localize</code>, archivos XLF, y compila distintas builds por local.</p>
+          <p>Traduce la app a varios idiomas con @angular/localize.</p>
         </div>
         <button class="next-chapter-btn" onclick="siguienteCapitulo(15)">Siguiente</button>
       </div>
 
-      <div class="chapter">
+      <div class="chapter" id="rendimiento">
         <div class="chapter-header">
           <span class="chapter-number">16</span>
-          <h2>Rendimiento y Optimización</h2>
+          <h2>Rendimiento</h2>
         </div>
         <div class="chapter-body">
-          <p>Mejora el rendimiento con OnPush, lazy loading, preloading, y analiza la app con Lighthouse.</p>
+          <p>Optimiza usando OnPush, lazy loading y analizadores de rendimiento.</p>
         </div>
         <button class="next-chapter-btn" onclick="siguienteCapitulo(16)">Siguiente</button>
       </div>
 
-      <div class="chapter">
+      <div class="chapter" id="accesibilidad">
         <div class="chapter-header">
           <span class="chapter-number">17</span>
           <h2>Accesibilidad</h2>
         </div>
         <div class="chapter-body">
-          <p>Asegura que tu app cumpla estándares de accesibilidad (ARIA, roles, contraste, navegabilidad con teclado).</p>
+          <p>Cumple estándares ARIA, roles y soporte para teclado.</p>
         </div>
         <button class="next-chapter-btn" onclick="siguienteCapitulo(17)">Siguiente</button>
       </div>
 
-      <div class="chapter">
+      <div class="chapter" id="gestion-estado">
         <div class="chapter-header">
           <span class="chapter-number">18</span>
           <h2>Gestión de Estado</h2>
         </div>
         <div class="chapter-body">
-          <p>Usa NgRx u otras librerías para un estado predecible, siguiendo patrones de Redux y simplificando la lógica compleja.</p>
+          <p>Usa NgRx u otras librerías para manejo de estado global tipo Redux.</p>
         </div>
         <button class="next-chapter-btn" onclick="siguienteCapitulo(18)">Siguiente</button>
       </div>
 
-      <div class="chapter">
+      <div class="chapter" id="animaciones">
         <div class="chapter-header">
           <span class="chapter-number">19</span>
           <h2>Animaciones</h2>
         </div>
         <div class="chapter-body">
-          <p>Agrega animaciones con <code>@angular/animations</code> para transiciones suaves entre vistas y elementos.</p>
+          <p>Agregar animaciones con @angular/animations para transiciones suaves.</p>
         </div>
         <button class="next-chapter-btn" onclick="siguienteCapitulo(19)">Siguiente</button>
       </div>
 
-      <div class="chapter">
+      <div class="chapter" id="herramientas">
         <div class="chapter-header">
           <span class="chapter-number">20</span>
-          <h2>Herramientas del Ecosistema</h2>
+          <h2>Herramientas</h2>
         </div>
         <div class="chapter-body">
-          <p>Aprovecha Angular CLI, Angular Console, Angular Language Service, y librerías de componentes para acelerar el desarrollo.</p>
+          <p>CLI, Angular Console, Language Service y librerías de componentes.</p>
         </div>
         <button class="next-chapter-btn" onclick="siguienteCapitulo(20)">Siguiente</button>
       </div>
     </div>
-
-    <aside class="sidebar">
-      <div class="user-profile">
-        <img class="user-avatar" src="https://via.placeholder.com/60" alt="Avatar">
-        <div class="user-info">
-          <span class="user-name">Tu Nombre</span>
-          <span class="user-level">Nivel 1</span>
-        </div>
-        <button class="view-profile">Ver Perfil</button>
-      </div>
-
-      <div class="course-progress">
-        <h3>Progreso del Curso</h3>
-        <div class="progress-scroll">
-          <p>Ejercicios: 0/44</p>
-          <p>Proyectos Completados: 0/2</p>
-          <p>XP Obtenida: 0/765</p>
-          <p>Progreso: 0% ---> 100% (simulado con scroll)</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit amet risus semper, ultricies urna quis, ullamcorper nisi. (Contenido simulado para scroll)</p>
-          <p>Más texto... Más texto... Más texto...</p>
-          <p>Continúa bajando...</p>
-          <p>...hasta el 100%</p>
-        </div>
-      </div>
-
-      <div class="course-badges">
-        <h3>Insignias del Curso</h3>
-        <p>Completa capítulos para ganar insignias</p>
-        <div class="badges-grid">
-          <div class="badge-slot">?</div>
-          <div class="badge-slot">?</div>
-          <div class="badge-slot">?</div>
-          <div class="badge-slot">?</div>
-          <div class="badge-slot">?</div>
-          <div class="badge-slot">?</div>
-        </div>
-      </div>
-    </aside>
   </div>
 
   <footer class="retro-footer">
