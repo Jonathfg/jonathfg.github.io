@@ -5,7 +5,7 @@ html, body {
   color: #fff;
   font-family: 'Press Start 2P', cursive;
   font-size: 14px;
-  line-height: 1.8; /* Mayor line-height para legibilidad */
+  line-height: 1.8; /* Mejor line-height */
   letter-spacing: 0.5px; /* Espacio mayor entre letras */
 }
 
@@ -105,14 +105,11 @@ a:hover {
 }
 
 .main-container {
-  display: flex;
   max-width: 1200px;
   margin: 2em auto;
   padding: 0 1em;
-  gap: 2em;
 }
 
-/* Ahora sólo contenido principal, sin sidebar */
 .course-content {
   flex: 1;
 }
@@ -164,12 +161,15 @@ a:hover {
 }
 
 .chapter-body code {
-  background: #0f0f1f;
-  color: #73dfff;
-  padding: 0.2em 0.4em;
+  background: #000000;
+  color: #00ff7f;
+  padding: 0.3em 0.5em;
   border: 1px solid #333;
-  letter-spacing: 0.5px;
   display: inline-block;
+  letter-spacing: normal;
+  font-size: 0.85em;
+  box-shadow: 0 0 5px #00ff7f;
+  margin: 0 0.2em;
 }
 
 .retro-footer {
