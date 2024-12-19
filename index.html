@@ -3,84 +3,114 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Guía Retro de Angular</title>
+  <title>Curso de Angular Retro - Inspirado en Codedex</title>
   <link rel="stylesheet" href="styles.css"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Fuente pixel art: Press Start 2P -->
+  <!-- Fuente pixel -->
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="retro-header">
-    <div class="header-container">
-      <h1>Guía Completa de Angular</h1>
-      <p class="subtitle">Aprende Angular desde cero con estilo retro</p>
-      <button class="retro-button">Comenzar</button>
+  <header class="hero-section">
+    <nav class="top-nav">
+      <div class="logo">
+        <!-- Reemplaza por tu logo -->
+        <span class="brand">Códedex Retro</span>
+      </div>
+      <ul class="main-menu">
+        <li><a href="#">Learn</a></li>
+        <li><a href="#">Practice</a></li>
+        <li><a href="#">Community</a></li>
+        <li><a href="#">Pricing</a></li>
+      </ul>
+      <button class="sign-up-btn">Sign Up</button>
+    </nav>
+    <div class="hero-content">
+      <span class="course-level">BEGINNER COURSE</span>
+      <h1>Angular</h1>
+      <p class="hero-subtitle">Aprende componentes, servicios y enrutamiento para crear aplicaciones web dinámicas y escalables.</p>
+      <button class="start-button">Start Learning for Free</button>
     </div>
   </header>
 
-  <nav class="retro-navbar">
-    <ul>
-      <li><a href="#justificacion">justificación</a></li>
-      <li><a href="#instalacion">instalación</a></li>
-      <li><a href="#primeros-pasos">primeros pasos</a></li>
-      <li><a href="#utilizacion">utilización</a></li>
-      <li><a href="#funcionamiento">funcionamiento</a></li>
-      <li><a href="#conclusiones">conclusiones</a></li>
-      <li><a href="#ejemplo">ejemplo práctico</a></li>
-    </ul>
-  </nav>
-
-  <main class="retro-main">
-    <section id="justificacion">
-      <h2>Justificación del Framework</h2>
-      <div class="retro-card">
-        <p>Angular es un framework de tipo SPA, mantenido por Google...</p>
-      </div>
-    </section>
-
-    <section id="instalacion">
-      <h2>Instalación</h2>
-      <div class="retro-card">
-        <p>Para instalar Angular CLI, usa <code>npm install -g @angular/cli</code>...</p>
-      </div>
-    </section>
-
-    <section id="primeros-pasos">
-      <h2>Primeros Pasos</h2>
-      <div class="retro-card">
-        <p>Crea tu primera app con <code>ng new mi-primera-app</code>, luego <code>ng serve</code>...</p>
-      </div>
-    </section>
-
-    <section id="ejemplo">
-      <h2>Ejemplo Práctico</h2>
-      <div class="retro-card">
-        <p>Ejecuta el código y observa la salida:</p>
-        <pre><code>// Código simulado
-function main() {
-  console.log("Hola desde Angular retro!");
-}
-main();
-</code></pre>
-        <button class="retro-button" onclick="runRetroExample()">Run</button>
-        <div class="retro-console">
-          <div class="retro-console-header">Consola:</div>
-          <div class="retro-console-output" id="console-output"></div>
+  <div class="main-container">
+    <div class="course-content">
+      <div class="chapter">
+        <div class="chapter-header">
+          <span class="chapter-number">1</span>
+          <h2>Introducción a Angular</h2>
+        </div>
+        <div class="chapter-body">
+          <p>Aprende a escribir tu primer componente, entender la arquitectura del framework y el ciclo de vida de tu aplicación.</p>
+          <div class="exercises">
+            <div class="exercise">
+              <span class="exercise-title">Exercise 1</span>
+              <span class="exercise-name">Set Up</span>
+              <button class="start-exercise">Start</button>
+            </div>
+            <div class="exercise locked">
+              <span class="exercise-title">Exercise 2</span>
+              <span class="exercise-name">Hello World</span>
+              <span class="locked-icon">???</span>
+            </div>
+            <div class="exercise locked">
+              <span class="exercise-title">Exercise 3</span>
+              <span class="exercise-name">Components</span>
+              <span class="locked-icon">???</span>
+            </div>
+            <!-- Añade más ejercicios según necesites -->
+          </div>
+          <div class="bonus">
+            <span>Bonus Article</span>
+            <span>Completa el capítulo para desbloquear</span>
+          </div>
         </div>
       </div>
-    </section>
-  </main>
+
+      <div class="chapter">
+        <div class="chapter-header">
+          <span class="chapter-number">2</span>
+          <h2>Enrutamiento</h2>
+        </div>
+        <!-- Contenido simulado -->
+      </div>
+
+      <!-- Más capítulos... -->
+    </div>
+
+    <aside class="sidebar">
+      <div class="user-profile">
+        <img class="user-avatar" src="https://via.placeholder.com/60" alt="Avatar">
+        <div class="user-info">
+          <span class="user-name">Your Name</span>
+          <span class="user-level">Level 1</span>
+        </div>
+        <button class="view-profile">View Profile</button>
+      </div>
+
+      <div class="course-progress">
+        <h3>Course Progress</h3>
+        <p>Exercises: 0/44</p>
+        <p>Projects Completed: 0/2</p>
+        <p>XP Earned: 0/765</p>
+      </div>
+
+      <div class="course-badges">
+        <h3>Course Badges</h3>
+        <p>Complete a chapter to earn a badge</p>
+        <div class="badges-grid">
+          <!-- Placeholder for badges -->
+          <div class="badge-slot">?</div>
+          <div class="badge-slot">?</div>
+          <div class="badge-slot">?</div>
+          <div class="badge-slot">?</div>
+        </div>
+      </div>
+    </aside>
+  </div>
 
   <footer class="retro-footer">
-    <p>© 2024 - Guía Retro de Angular</p>
+    <p>© 2024 - Inspirado en Codedex - Retro Angular Course</p>
   </footer>
-
-  <script>
-    function runRetroExample() {
-      const output = document.getElementById('console-output');
-      output.textContent = "Hola desde Angular retro!";
-    }
-  </script>
 </body>
 </html>
