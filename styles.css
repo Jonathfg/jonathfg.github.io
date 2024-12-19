@@ -6,7 +6,7 @@ html, body {
   font-family: 'Press Start 2P', cursive;
   font-size: 14px;
   line-height: 1.8; /* Mayor line-height para legibilidad */
-  letter-spacing: 0.5px; /* Espacio ligeramente mayor entre letras */
+  letter-spacing: 0.5px; /* Espacio mayor entre letras */
 }
 
 a {
@@ -25,10 +25,10 @@ a:hover {
   align-items: center;
   padding: 1em;
   background: #181830;
+  border-bottom: 2px solid #444;
   position: sticky;
   top: 0;
   z-index: 999;
-  border-bottom: 2px solid #444;
 }
 
 .logo .brand {
@@ -112,7 +112,7 @@ a:hover {
   gap: 2em;
 }
 
-/* Ahora no hay sidebar, sólo contenido principal */
+/* Ahora sólo contenido principal, sin sidebar */
 .course-content {
   flex: 1;
 }
@@ -120,7 +120,7 @@ a:hover {
 .chapter {
   background: #181830;
   margin-bottom: 2em;
-  padding: 1em;
+  padding: 1.5em;
   border: 1px solid #333;
 }
 
@@ -153,8 +153,14 @@ a:hover {
 .chapter-body p {
   font-size: 0.8em;
   color: #ccc;
-  margin-bottom: 1em;
+  margin-bottom: 1.2em;
   letter-spacing: 0.5px;
+}
+
+.chapter-body ul {
+  margin-left: 1.5em;
+  list-style: disc;
+  margin-bottom: 1.2em;
 }
 
 .chapter-body code {
@@ -163,21 +169,7 @@ a:hover {
   padding: 0.2em 0.4em;
   border: 1px solid #333;
   letter-spacing: 0.5px;
-}
-
-.next-chapter-btn {
-  background: #73dfff;
-  border: none;
-  color: #0f0f1f;
-  padding: 0.5em 1em;
-  font-size: 0.7em;
-  cursor: pointer;
   display: inline-block;
-  margin-top: 1em;
-}
-
-.next-chapter-btn:hover {
-  background: #5ac0e6;
 }
 
 .retro-footer {
