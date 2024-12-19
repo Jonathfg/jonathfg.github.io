@@ -9,21 +9,21 @@ html, body {
   line-height: 1.6;
 }
 
-/* Destacar inline code (app.module.ts, etc.) */
+/* Código inline sin fondo ni negrita, solo color */
 code {
   color: #ffec27;
   background: none;
   padding: 0;
   border: none;
-  font-weight: bold;
+  font-weight: normal;
 }
 
-/* Destacar preguntas como ¿Qué aplicaciones tiene?, etc. 
-   Ya estaban con strong, ahora ajustamos un poco más */
+/* Destacar preguntas sin subrayado */
 .chapter-body p strong {
   color: #ffec27;
-  font-size: 1.1em; /* Un poco más grande para destacar aún más */
-  text-decoration: underline; /* Subrayado sutil */
+  font-size: 1.1em;
+  /* Eliminamos la línea: text-decoration: underline; */
+  /* Solo color y tamaño para destacar */
 }
 
 /* Enlaces */
@@ -40,8 +40,8 @@ a:hover {
 .top-nav {
   position: sticky;
   top: 0;
-  z-index: 1000; /* Aumentamos z-index */
-  background: #181830; /* Opaca, sin transparencia */
+  z-index: 1000;
+  background: #181830; /* Opaca */
   padding: 1em;
   display: flex;
   justify-content: space-between;
@@ -72,7 +72,7 @@ a:hover {
 /* Hero section con imagen ajustada */
 .hero-section {
   position: relative;
-  margin-top: 80px; /* Espacio para que no se superponga con la nav */
+  margin-top: 80px; /* Espacio para que no se superponga la imagen con el menú */
   background: url('imagen_banner.jpg') no-repeat center top;
   background-size: contain;
   background-color: #000; 
@@ -215,7 +215,8 @@ a:hover {
   padding: 0.3em 0.6em;
   cursor: pointer;
   border-radius: 3px;
-  text-transform: uppercase;
+  /* Sin mayúsculas forzadas */
+  text-transform: none;
   /* Un poco más bonito: sombra sutil */
   box-shadow: 0 0 5px rgba(0,0,0,0.5);
 }
