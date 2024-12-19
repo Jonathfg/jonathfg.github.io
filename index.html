@@ -3,266 +3,84 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Guía Completa de Angular</title>
+  <title>Guía Retro de Angular</title>
   <link rel="stylesheet" href="styles.css"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Fuente Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-  <script>
-    // Pequeño script para el ejemplo de ejecución
-    function runExample() {
-      const output = document.getElementById('console-output');
-      output.textContent = '';
-      const mensaje = "Hola desde Angular (simulado)!";
-      output.textContent = mensaje;
-    }
-  </script>
+  <!-- Fuente pixel art: Press Start 2P -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
+  <header class="retro-header">
     <div class="header-container">
-      <h1>Introducción y Guía Completa de Angular</h1>
-      <p class="subtitle">Del Hola Mundo a la creación de una aplicación completa</p>
+      <h1>Guía Completa de Angular</h1>
+      <p class="subtitle">Aprende Angular desde cero con estilo retro</p>
+      <button class="retro-button">Comenzar</button>
     </div>
   </header>
 
-  <nav class="navbar">
+  <nav class="retro-navbar">
     <ul>
       <li><a href="#justificacion">justificación</a></li>
       <li><a href="#instalacion">instalación</a></li>
       <li><a href="#primeros-pasos">primeros pasos</a></li>
-      <li><a href="#utilizacion">utilización del framework</a></li>
-      <li><a href="#funcionamiento">funcionamiento interno</a></li>
+      <li><a href="#utilizacion">utilización</a></li>
+      <li><a href="#funcionamiento">funcionamiento</a></li>
       <li><a href="#conclusiones">conclusiones</a></li>
-      <li><a href="#enrutamiento">enrutamiento</a></li>
-      <li><a href="#consumo-apis">consumo de apis</a></li>
-      <li><a href="#modulos-lazy">módulos y lazy loading</a></li>
-      <li><a href="#directivas-pipes">directivas y pipes</a></li>
-      <li><a href="#pruebas">pruebas (testing)</a></li>
-      <li><a href="#despliegue">despliegue</a></li>
-      <li><a href="#seguridad">seguridad y autenticación</a></li>
-      <li><a href="#seo">seo y metadatos</a></li>
-      <li><a href="#internacionalizacion">internacionalización</a></li>
-      <li><a href="#rendimiento">rendimiento y optimización</a></li>
-      <li><a href="#accesibilidad">accesibilidad</a></li>
-      <li><a href="#gestion-estado">gestión de estado</a></li>
-      <li><a href="#animaciones">animaciones</a></li>
-      <li><a href="#herramientas">herramientas del ecosistema</a></li>
+      <li><a href="#ejemplo">ejemplo práctico</a></li>
     </ul>
   </nav>
 
-  <main>
-    <!-- 1. Justificación -->
+  <main class="retro-main">
     <section id="justificacion">
       <h2>Justificación del Framework</h2>
-      <article>
-        <h3>¿Para qué sirve Angular?</h3>
-        <p><strong>Angular</strong> es un framework de desarrollo web mantenido por Google, orientado a la construcción de aplicaciones robustas, escalables y modernas del lado del cliente. Sirve para crear aplicaciones de una sola página (SPAs) con experiencia fluida, interfaces complejas y mantenibles, y optimizar la productividad del equipo.</p>
-      </article>
-      <article>
-        <h3>¿Qué aplicaciones tiene?</h3>
-        <p>Angular se utiliza en un amplio abanico de contextos: aplicaciones empresariales internas (ERP, CRM), paneles de administración, sitios de e-commerce interactivos, plataformas de educación en línea, apps móviles híbridas con Ionic, y soluciones escalables de misión crítica.</p>
-      </article>
-      <article>
-        <h3>¿Sobre qué lenguajes se apoya?</h3>
-        <p>Angular se basa principalmente en <strong>TypeScript</strong>, un superconjunto tipado de JavaScript, además de HTML y CSS para las vistas y el diseño. Esta combinación ofrece robustez, mantenibilidad y compatibilidad con el ecosistema web moderno.</p>
-      </article>
-      <article>
-        <h3>¿Qué prerrequisitos necesita?</h3>
-        <p>Se recomienda conocimientos básicos de HTML, CSS, JavaScript y estar dispuesto a aprender TypeScript. También es necesario tener Node.js y npm instalados, y entender la arquitectura típica de una aplicación web con componentes y servicios.</p>
+      <div class="retro-card">
+        <p>Angular es un framework de tipo SPA, mantenido por Google...</p>
+      </div>
     </section>
 
-    <!-- 2. Instalación -->
     <section id="instalacion">
       <h2>Instalación</h2>
-      <article>
-        <h3>¿Se precisa instalación?</h3>
-        <p>Sí. Necesitas instalar <strong>Node.js</strong> (con npm) y el <strong>Angular CLI</strong> para crear, compilar y servir proyectos Angular fácilmente.</p>
-      </article>
-      <article>
-        <h3>Pasos para la instalación</h3>
-        <p><strong>En Windows:</strong></p>
-        <ol>
-          <li>Descargar la versión LTS de Node.js desde <a href="https://nodejs.org" target="_blank">nodejs.org</a>.</li>
-          <li>Verificar con <code>node -v</code> y <code>npm -v</code>.</li>
-          <li>Instalar Angular CLI: <code>npm install -g @angular/cli</code>.</li>
-        </ol>
-
-        <p><strong>En macOS/Linux:</strong></p>
-        <ol>
-          <li>Instalar Node.js (por ejemplo, usando nvm).</li>
-          <li>Verificar con <code>node -v</code> y <code>npm -v</code>.</li>
-          <li>Instalar Angular CLI: <code>sudo npm install -g @angular/cli</code>.</li>
-        </ol>
-      </article>
-      <article>
-        <h3>Versiones necesarias</h3>
-        <p>Se recomienda usar la versión LTS de Node.js y la última versión estable de Angular para garantizar compatibilidad y soporte a largo plazo.</p>
-      </article>
-      <article>
-        <h3>Rutas a tener en cuenta y variables de entorno</h3>
-        <p>Al crear un proyecto (<code>ng new</code>) se genera una estructura con <code>src/app</code> (código principal), <code>src/assets</code> (estáticos), <code>src/environments</code> (config. por entorno). Angular no requiere variables de entorno específicas por defecto, pero es posible definir endpoints o configuraciones personalizadas en <code>environments/</code>.</p>
-      </article>
-      <article>
-        <h3>¿Necesita base de datos?</h3>
-        <p>Angular es frontend, no se conecta directamente a la base de datos. Utiliza APIs REST/GraphQL. Si se necesita persistencia, se conecta a un backend o servicios externos. No requiere base de datos directa del lado del cliente.</p>
+      <div class="retro-card">
+        <p>Para instalar Angular CLI, usa <code>npm install -g @angular/cli</code>...</p>
+      </div>
     </section>
 
-    <!-- 3. Primeros pasos -->
     <section id="primeros-pasos">
       <h2>Primeros Pasos</h2>
-      <article>
-        <h3>Preparación del Entorno de Desarrollo</h3>
-        <p>Asegúrate de tener Node.js y Angular CLI instalados. Es recomendable usar un editor como VSCode con extensiones para Angular y TypeScript. Familiarízate con la línea de comandos y <code>ng</code> para generar componentes y servicios.</p>
-      </article>
-      <article>
-        <h3>Creación de un Proyecto Angular</h3>
-        <p>Para crear un nuevo proyecto:</p>
-        <pre><code>ng new mi-primera-app
-cd mi-primera-app
-ng serve --open</code></pre>
-        <p>Esto iniciará el servidor en <code>http://localhost:4200</code> y mostrará la página inicial de Angular.</p>
-      </article>
-      <article>
-        <h3>Estructura de un Proyecto Angular</h3>
-        <p>La estructura típica incluye <code>app.module.ts</code> (módulo principal), <code>app.component.ts</code> (componente raíz), <code>app.component.html</code> (vista raíz), <code>app.component.css</code> (estilos), y otros componentes y servicios en <code>src/app</code>. Los recursos estáticos van en <code>src/assets</code>.</p>
-      </article>
-      <article>
-        <h3>Primeros Pasos en la Codificación (Hola Mundo)</h3>
-        <p>El "Hola Mundo" en Angular es la página inicial generada por CLI. Edita <code>app.component.html</code> y reemplaza su contenido con:</p>
-        <pre><code>&lt;h1&gt;¡Hola Mundo desde Angular!&lt;/h1&gt;</code></pre>
-        <p>Guarda y el navegador mostrará tu mensaje. Esta es la primera aproximación y confirmación de que el entorno funciona.</p>
+      <div class="retro-card">
+        <p>Crea tu primera app con <code>ng new mi-primera-app</code>, luego <code>ng serve</code>...</p>
+      </div>
     </section>
 
-    <!-- 4. Utilización del framework -->
-    <section id="utilizacion">
-      <h2>Utilización del Framework</h2>
-      <article>
-        <h3>¿Cómo empezar a crear una aplicación base?</h3>
-        <p>Tras el "Hola Mundo", empieza a crear componentes con <code>ng generate component</code>, define rutas con <code>ng generate module app-routing --flat --module=app</code>, añade servicios para lógica de negocio y consume APIs. La aplicación base surge al organizar componentes en módulos y enlazarlos con el enrutamiento.</p>
-      </article>
-      <article>
-        <h3>¿Cómo visualizar los resultados de la ejecución?</h3>
-        <p>Con <code>ng serve</code> tienes recarga en vivo en <code>http://localhost:4200</code>. Para producción, usa <code>ng build --configuration production</code> y despliega los archivos estáticos resultantes en un hosting. Durante el desarrollo, cada cambio guardado se refleja automáticamente en el navegador.</p>
-    </section>
-
-    <!-- 5. Explicación del funcionamiento -->
-    <section id="funcionamiento">
-      <h2>Funcionamiento Interno</h2>
-      <article>
-        <h3>¿Actúa sobre páginas, ficheros, secciones…?</h3>
-        <p>Angular trabaja con componentes, cada uno con su HTML, CSS y TS. Estos componentes se agrupan en módulos. El enrutador simula múltiples páginas sin recargas. Cada componente representa una sección de la interfaz, y la aplicación se considera una SPA.</p>
-      </article>
-      <article>
-        <h3>¿Cómo se editan/modifican los ficheros?</h3>
-        <p>Edita el HTML, TS o CSS de cada componente según necesites. Usa data binding (<code>{{variable}}</code>), directivas (<code>*ngIf</code>, <code>*ngFor</code>), y servicios inyectados para gestionar la lógica y los datos. Cada cambio se ve reflejado inmediatamente en el navegador durante el desarrollo.</p>
-      </article>
-      <article>
-        <h3>¿Cómo se referencian los ficheros desde otras aplicaciones?</h3>
-        <p>Si integras Angular en una aplicación mayor, normalmente sirves el build de Angular (carpeta <code>dist</code>) como estáticos. Si otra app requiere consumir el frontend Angular, se integra a través de rutas proxy o iframes. Las dependencias se gestionan con npm y el Angular CLI.</p>
-    </section>
-
-    <!-- 6. Conclusiones -->
-    <section id="conclusiones">
-      <h2>Conclusiones</h2>
-      <p>Hemos respondido las preguntas clave sobre Angular: su utilidad, las aplicaciones, en qué lenguajes se basa, qué se necesita para empezar, cómo se instala, cómo crear un proyecto, ejecutar el "Hola Mundo", comprender su arquitectura de componentes y módulos, y cómo visualizar resultados. Con estas bases, un principiante puede iniciar con confianza el desarrollo de aplicaciones complejas y escalables en Angular.</p>
-    </section>
-
-    <!-- 7. Enrutamiento -->
-    <section id="enrutamiento">
-      <h2>Enrutamiento</h2>
-      <p>Angular proporciona un sistema de enrutamiento interno para crear una SPA con múltiples vistas. Configura rutas en <code>app-routing.module.ts</code> asignando componentes a rutas (e.g. <code>{ path: 'home', component: HomeComponent }</code>). El enrutador evita recargas completas y facilita la navegación fluida.</p>
-    </section>
-
-    <!-- 8. Consumo de APIs -->
-    <section id="consumo-apis">
-      <h2>Consumo de APIs</h2>
-      <p>Utiliza el servicio <code>HttpClient</code> para hacer peticiones HTTP a servicios REST. Inyecta <code>HttpClient</code> en tus servicios y usa métodos como <code>http.get()</code>, <code>http.post()</code> para interactuar con el backend. Esto permite mostrar datos dinámicos en la vista.</p>
-    
-    <!-- 9. Módulos y Lazy Loading -->
-    <section id="modulos-lazy">
-      <h2>Módulos y Lazy Loading</h2>
-      <p>Organiza tu aplicación en módulos para separar funcionalidades. El lazy loading carga módulos bajo demanda, mejorando el rendimiento inicial. Configura rutas con <code>loadChildren</code> y Angular cargará el módulo cuando se acceda a la ruta correspondiente.</p>
-    
-    <!-- 10. Directivas y Pipes -->
-    <section id="directivas-pipes">
-      <h2>Directivas y Pipes</h2>
-      <p>Las directivas manipulan el DOM dinámicamente (<code>*ngFor</code>, <code>*ngIf</code>) o añaden comportamiento. Los pipes transforman datos en la vista (<code>| date</code>, <code>| uppercase</code>). Creando directivas y pipes personalizados aumentas la reutilización y limpieza del código.</p>
-    
-    <!-- 11. Pruebas (Testing) -->
-    <section id="pruebas">
-      <h2>Pruebas (Testing)</h2>
-      <p>Angular incluye soporte para pruebas unitarias con Jasmine y Karma. Ejecuta <code>ng test</code> para correr pruebas. Crea pruebas unitarias para componentes, servicios y pipes. También puedes hacer pruebas end-to-end (E2E) con Protractor para validar el funcionamiento en navegadores reales.</p>
-    
-    <!-- 12. Despliegue -->
-    <section id="despliegue">
-      <h2>Despliegue</h2>
-      <p>Tras usar <code>ng build --configuration production</code>, obtienes archivos estáticos en <code>dist/</code>. Sube estos archivos a un hosting estático (e.g. GitHub Pages, Netlify, Firebase Hosting) o a tu propio servidor. Angular no requiere un backend especial para servir el frontend compilado.</p>
-    
-    <!-- 13. Seguridad y Autenticación -->
-    <section id="seguridad">
-      <h2>Seguridad y Autenticación</h2>
-      <p>Protege tu aplicación contra ataques XSS usando data binding seguro. Implementa autenticación y autorización con JWT, OAuth u otros. Intercepta peticiones HTTP con HttpInterceptors para añadir tokens. Usa guardas de ruta (<code>CanActivate</code>) para restringir acceso a secciones protegidas.</p>
-    
-    <!-- 14. SEO y Metadatos -->
-    <section id="seo">
-      <h2>SEO y Metadatos</h2>
-      <p>Las SPAs son desafiantes para el SEO. Usa Angular Universal para renderizado del lado del servidor (SSR) y mejorar el SEO. Añade metadatos, Open Graph y microdatos para optimizar la visibilidad en buscadores y redes sociales.</p>
-    
-    <!-- 15. Internacionalización -->
-    <section id="internacionalizacion">
-      <h2>Internacionalización</h2>
-      <p>Traduce tu aplicación a varios idiomas con el módulo <code>@angular/localize</code>. Extrae texto, genera archivos de traducción (XLF) y compila la app para distintos locales. Esto permite llegar a audiencias globales.</p>
-    
-    <!-- 16. Rendimiento y Optimización -->
-    <section id="rendimiento">
-      <h2>Rendimiento y Optimización</h2>
-      <p>Optimiza el rendimiento usando ChangeDetectionStrategy.OnPush, lazy loading de módulos e imágenes, preload de rutas, y herramientas como Lighthouse para medir. Minimiza el uso de zonas pesadas, evita cálculos costosos en plantillas, y aprovéchate del Ivy Renderer para builds más rápidos.</p>
-    
-    <!-- 17. Accesibilidad -->
-    <section id="accesibilidad">
-      <h2>Accesibilidad</h2>
-      <p>Asegura que tu app sea usable por todos. Añade atributos ARIA, usa contrastes adecuados, soporte para teclado y lectores de pantalla. Angular no hace accesibilidad por sí solo, pero tu código debe cumplir buenas prácticas (etiquetas semánticas, roles, etc.).</p>
-    
-    <!-- 18. Gestión de Estado -->
-    <section id="gestion-estado">
-      <h2>Gestión de Estado</h2>
-      <p>Aplicaciones complejas requieren manejar estados compartidos entre componentes. Usa RxJS y NgRx para un estado global predecible, patrones Redux, acciones, efectos y reducers. Esto facilita el debugging y la escalabilidad.</p>
-    
-    <!-- 19. Animaciones -->
-    <section id="animaciones">
-      <h2>Animaciones</h2>
-      <p>Angular incorpora el módulo de animaciones basado en Web Animations API. Crea transiciones suaves entre vistas, animaciones en la entrada/salida de elementos con <code>@angular/animations</code>. Esto mejora la experiencia de usuario.</p>
-    
-    <!-- 20. Herramientas del Ecosistema -->
-    <section id="herramientas">
-      <h2>Herramientas del Ecosistema</h2>
-      <p>Aprovecha Angular CLI para generar código, crear builds optimizados, ejecutar pruebas, y filtrar proyectos. Usa extensiones como Angular Language Service en VSCode para autocompletado, Angular Console para interfaz gráfica, y bibliotecas de componentes (Material, PrimeNG) para acelerar el desarrollo.</p>
-
-    <!-- Ejemplo Interactivo -->
-    <section class="ejercicio-section">
-      <h2>Ejemplo Interactivo</h2>
-      <p>A continuación un ejemplo simulado: código Angular (ficticio) y ejecución en una consola integrada:</p>
-      <div class="code-container">
-<pre><code>// Simulación de código Angular (tipo)
+    <section id="ejemplo">
+      <h2>Ejemplo Práctico</h2>
+      <div class="retro-card">
+        <p>Ejecuta el código y observa la salida:</p>
+        <pre><code>// Código simulado
 function main() {
-  console.log("Hola desde Angular (simulado)!");
+  console.log("Hola desde Angular retro!");
 }
 main();
 </code></pre>
-      </div>
-      <button class="run-button" onclick="runExample()">Run</button>
-      <div class="console-container">
-        <div class="console-header">Consola:</div>
-        <div class="console-output" id="console-output"></div>
+        <button class="retro-button" onclick="runRetroExample()">Run</button>
+        <div class="retro-console">
+          <div class="retro-console-header">Consola:</div>
+          <div class="retro-console-output" id="console-output"></div>
+        </div>
       </div>
     </section>
-
   </main>
 
-  <footer>
-    <p>© 2024 - Guía Completa de Angular. Ejemplo de Tutorial HTML+CSS.</p>
+  <footer class="retro-footer">
+    <p>© 2024 - Guía Retro de Angular</p>
   </footer>
+
+  <script>
+    function runRetroExample() {
+      const output = document.getElementById('console-output');
+      output.textContent = "Hola desde Angular retro!";
+    }
+  </script>
 </body>
 </html>
