@@ -9,18 +9,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <!-- Fuente pixel -->
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-
-  <script>
-    function siguienteCapitulo(num) {
-      alert("Capítulo " + num + " completado. ¡Desbloqueando el siguiente!");
-    }
-  </script>
 </head>
 <body>
+<a id="top"></a>
   <header class="hero-section">
     <nav class="top-nav">
       <div class="logo">
-        <a href="#" class="brand">Angular Retro</a>
+        <!-- Al hacer clic, lleva a #top -->
+        <a href="#top" class="brand">Angular Retro</a>
       </div>
       <ul class="main-menu">
         <li><a href="#justificacion">Justificación</a></li>
@@ -29,270 +25,162 @@
         <li><a href="#utilizacion">Utilización</a></li>
         <li><a href="#funcionamiento">Funcionamiento</a></li>
         <li><a href="#conclusiones">Conclusiones</a></li>
-        <li><a href="#enrutamiento">Enrutamiento</a></li>
-        <li><a href="#consumo-apis">Consumo de APIs</a></li>
-        <li><a href="#modulos-lazy">Módulos y Lazy Loading</a></li>
-        <li><a href="#directivas-pipes">Directivas y Pipes</a></li>
-        <li><a href="#pruebas">Pruebas</a></li>
-        <li><a href="#despliegue">Despliegue</a></li>
-        <li><a href="#seguridad">Seguridad</a></li>
-        <li><a href="#seo">SEO</a></li>
-        <li><a href="#internacionalizacion">Internacionalización</a></li>
-        <li><a href="#rendimiento">Rendimiento</a></li>
-        <li><a href="#accesibilidad">Accesibilidad</a></li>
-        <li><a href="#gestion-estado">Gestión de Estado</a></li>
-        <li><a href="#animaciones">Animaciones</a></li>
-        <li><a href="#herramientas">Herramientas</a></li>
       </ul>
     </nav>
     <div class="hero-content">
       <span class="course-level">BEGINNER COURSE</span>
       <h1>Angular</h1>
-      <p class="hero-subtitle">Aprende a dominar Angular desde los fundamentos hasta conceptos avanzados, con un toque retro.</p>
-      <!-- El botón ahora lleva a la sección #primeros-pasos (capítulo 3) -->
+      <p class="hero-subtitle">Aprende a dominar Angular desde sus fundamentos. Este tutorial, con un estilo retro, te guiará paso a paso para que comprendas por qué Angular es tan poderoso, cómo instalarlo, crear tu primera aplicación, entender su funcionamiento interno y sacar conclusiones útiles para avanzar con solidez.</p>
       <a href="#primeros-pasos" class="start-button">Empezar a hacer tu primera aplicación</a>
     </div>
   </header>
 
   <div class="main-container">
     <div class="course-content">
-      <!-- Capítulo 1: Justificación del framework -->
+
+      <!-- 1. Justificación del framework -->
       <div class="chapter" id="justificacion">
         <div class="chapter-header">
           <span class="chapter-number">1</span>
           <h2>Justificación del Framework</h2>
         </div>
         <div class="chapter-body">
-          <p><strong>¿Para qué sirve?</strong> Angular sirve para desarrollar aplicaciones web modernas, dinámicas y escalables, ofreciendo una arquitectura sólida y componentes reutilizables.</p>
-          <p><strong>¿Qué aplicaciones tiene?</strong> Desde paneles internos de administración, aplicaciones de una sola página (SPAs), e-commerce, hasta aplicaciones móviles híbridas con Ionic.</p>
-          <p><strong>¿Sobre qué lenguajes se apoya?</strong> Principalmente en TypeScript, además de HTML y CSS para la vista y el estilo.</p>
-          <p><strong>¿Qué prerrequisitos necesita?</strong> Conocimientos básicos de HTML, CSS, JavaScript, disposición para aprender TypeScript, y tener instalado Node.js y npm.</p>
+          <p><strong>¿Para qué sirve Angular?</strong><br>Angular es un framework para el desarrollo de aplicaciones web modernas de una sola página (SPA). Permite crear interfaces dinámicas, componentes reutilizables, manejar estados complejos y ofrecer experiencias de usuario fluidas sin necesidad de recargar completamente la página. Esto hace que el usuario interactúe con una aplicación más parecida a un entorno de escritorio que a un sitio web tradicional.</p>
+
+          <p><strong>¿Qué aplicaciones tiene?</strong><br>Angular se aplica en una amplia gama de proyectos:
+          <ul>
+            <li>Paneles internos de administración y dashboards.</li>
+            <li>Aplicaciones de e-commerce con funcionalidades interactivas avanzadas.</li>
+            <li>Plataformas de aprendizaje en línea con módulos dinámicos.</li>
+            <li>Aplicaciones móviles híbridas a través de Ionic.</li>
+            <li>Sistemas empresariales complejos que requieren escalabilidad y mantenibilidad.</li>
+          </ul>
+          En definitiva, cualquier aplicación web que requiera experiencias ricas del lado del cliente se beneficia de Angular.</p>
+
+          <p><strong>¿Sobre qué lenguajes se apoya?</strong><br>Angular se basa principalmente en TypeScript, un superconjunto tipado de JavaScript. Esto le da mayor robustez y facilidad de mantenimiento a largo plazo. Para la vista, usa HTML y CSS, de modo que no necesitarás un lenguaje nuevo para la presentación, sólo para la lógica y la arquitectura. TypeScript te ofrece un entorno más predecible, con autocompletado, verificación de tipos y una integración perfecta con el ecosistema JavaScript.</p>
+
+          <p><strong>¿Qué prerrequisitos necesita?</strong><br>Para empezar con Angular, es ideal tener:
+          <ul>
+            <li>Conocimientos básicos de HTML y CSS para la presentación de la interfaz.</li>
+            <li>Familiaridad con JavaScript, ya que TypeScript se construye sobre él.</li>
+            <li>Disposición para aprender TypeScript, entender su tipado, interfaces y clases.</li>
+            <li>Tener instalado Node.js y npm para administrar paquetes y ejecutar el CLI de Angular.</li>
+          </ul>
+          Con esto, podrás entrar sin problemas en el mundo de Angular y aprovechar su potencial.</p>
         </div>
-        <button class="next-chapter-btn" onclick="siguienteCapitulo(1)">Siguiente</button>
       </div>
 
-      <!-- Capítulo 2: Instalación -->
+      <!-- 2. Instalación -->
       <div class="chapter" id="instalacion">
         <div class="chapter-header">
           <span class="chapter-number">2</span>
           <h2>Instalación</h2>
         </div>
         <div class="chapter-body">
-          <p><strong>¿Se precisa instalación?</strong> Sí, necesitas Node.js, npm y Angular CLI.</p>
-          <p><strong>Pasos para la instalación:</strong> <code>npm install -g @angular/cli</code>, verifica con <code>ng version</code>.</p>
-          <p><strong>Versiones necesarias:</strong> Usa la versión LTS de Node.js y la última versión estable de Angular.</p>
-          <p><strong>Rutas a tener en cuenta:</strong> <code>src/app</code> para componentes, <code>src/assets</code> para estáticos, <code>src/environments</code> para configuraciones.</p>
-          <p><strong>Variables de entorno:</strong> No obligatorias, pero útiles para endpoints u otras configuraciones.</p>
-          <p><strong>¿Necesita base de datos?</strong> No directamente, Angular consume APIs externas.</p>
+          <p><strong>¿Se precisa instalación?</strong><br>Sí, necesitarás Node.js, npm y el Angular CLI (Command Line Interface). El CLI facilita la creación de proyectos, la generación de componentes, la ejecución de la aplicación en desarrollo y el empaquetado para producción.</p>
+
+          <p><strong>Pasos para la instalación:</strong><br>Primero, asegúrate de tener Node.js instalado. Luego, en la terminal, ejecuta:
+          <pre><code>npm install -g @angular/cli</code></pre>
+          Esto instalará el CLI de Angular globalmente. Comprueba con:
+          <pre><code>ng version</code></pre>
+          para ver la versión instalada.</p>
+
+          <p><strong>Versiones necesarias:</strong><br>Usa la versión LTS de Node.js para mayor estabilidad. Angular lanza versiones periódicas, así que la última versión estable es recomendable para empezar, contando con su documentación y soporte actualizados.</p>
+
+          <p><strong>Rutas a tener en cuenta:</strong><br>Cuando creas un proyecto con <code>ng new</code>, se genera una estructura estándar:
+          <ul>
+            <li><code>src/app</code>: Código principal (componentes, servicios, módulos).</li>
+            <li><code>src/assets</code>: Archivos estáticos (imágenes, fuentes, etc.).</li>
+            <li><code>src/environments</code>: Archivos de configuración para distintos entornos (desarrollo, producción).</li>
+          </ul>
+          Esta organización facilita el mantenimiento y escalado.</p>
+
+          <p><strong>Variables de entorno:</strong><br>No son obligatorias, pero pueden ser útiles para almacenar endpoints de APIs, claves o configuraciones según el entorno (dev, prod). Angular no las requiere por defecto, pero su estructura y la comunidad ofrecen formas de implementarlas fácilmente.</p>
+
+          <p><strong>¿Necesita base de datos?</strong><br>No directamente. Angular es frontend puro. Para datos persistentes, se conecta a APIs REST o GraphQL de un backend. Puedes simular datos con herramientas locales, pero la lógica de persistencia corre en el servidor, no en Angular.</p>
         </div>
-        <button class="next-chapter-btn" onclick="siguienteCapitulo(2)">Siguiente</button>
       </div>
 
-      <!-- Capítulo 3: Primeros pasos -->
+      <!-- 3. Primeros pasos -->
       <div class="chapter" id="primeros-pasos">
         <div class="chapter-header">
           <span class="chapter-number">3</span>
           <h2>Primeros pasos</h2>
         </div>
         <div class="chapter-body">
-          <p><strong>“Hola Mundo”:</strong> Crea un proyecto con <code>ng new mi-primera-app</code>, ejecuta <code>ng serve --open</code> y edita <code>app.component.html</code> para mostrar “Hola Mundo desde Angular!”</p>
+          <p><strong>“Hola Mundo”:</strong><br>Una vez instalado el CLI, crea un proyecto:
+          <pre><code>ng new mi-primera-app
+cd mi-primera-app
+ng serve --open</code></pre>
+          Esto abrirá el navegador en <code>http://localhost:4200</code> mostrando la página inicial de Angular. Edita <code>src/app/app.component.html</code> y reemplaza su contenido por:
+          <pre><code>&lt;h1&gt;Hola Mundo desde Angular!&lt;/h1&gt;</code></pre>
+          Al guardar, verás el mensaje en el navegador. Esta es tu primera confirmación de que todo funciona.</p>
+
+          <p>Además del “Hola Mundo”, dedica unos minutos a explorar la estructura del proyecto. Observa el <code>app.module.ts</code>, donde se declaran componentes, y <code>app.component.ts</code> con la clase del componente principal. Comprender esta arquitectura te ayudará a sentar bases sólidas.</p>
         </div>
-        <button class="next-chapter-btn" onclick="siguienteCapitulo(3)">Siguiente</button>
       </div>
 
-      <!-- Capítulo 4: Utilización del framework -->
+      <!-- 4. Utilización del framework -->
       <div class="chapter" id="utilizacion">
         <div class="chapter-header">
           <span class="chapter-number">4</span>
           <h2>Utilización del Framework</h2>
         </div>
         <div class="chapter-body">
-          <p><strong>¿Cómo crear una aplicación base?</strong> Usa componentes generados con la CLI, define rutas, servicios y vistas.</p>
-          <p><strong>¿Cómo visualizar resultados?</strong> Con <code>ng serve</code> en <code>http://localhost:4200</code> con recarga en vivo. Para producción, <code>ng build --configuration production</code>.</p>
+          <p><strong>¿Cómo crear una aplicación base?</strong><br>Utiliza el CLI para generar componentes:
+          <pre><code>ng generate component mi-componente</code></pre>
+          Esto creará un directorio con TS, HTML, CSS y pruebas del componente. Integra estos componentes en tu <code>app.module.ts</code> y ajusta las vistas. Para navegación, genera un módulo de enrutamiento:
+          <pre><code>ng generate module app-routing --flat --module=app</code></pre>
+          Allí defines rutas y componentes asociados.</p>
+
+          <p><strong>¿Cómo visualizar resultados?</strong><br>Durante el desarrollo, ejecuta:
+          <pre><code>ng serve --open</code></pre>
+          Cada vez que guardes un cambio, el navegador se actualizará automáticamente. Para un entorno productivo:
+          <pre><code>ng build --configuration production</code></pre>
+          Esto genera en <code>dist/</code> los archivos listos para ser desplegados en un servidor estático. Así podrás publicar tu aplicación sin necesidad de un backend especial, sólo necesitas un hosting de archivos.</p>
         </div>
-        <button class="next-chapter-btn" onclick="siguienteCapitulo(4)">Siguiente</button>
       </div>
 
-      <!-- Capítulo 5: Explicación del funcionamiento -->
+      <!-- 5. Explicación del funcionamiento -->
       <div class="chapter" id="funcionamiento">
         <div class="chapter-header">
           <span class="chapter-number">5</span>
           <h2>Funcionamiento Interno</h2>
         </div>
         <div class="chapter-body">
-          <p><strong>¿Actúa sobre páginas, ficheros, secciones…?</strong> Angular actúa sobre componentes organizados en módulos. El enrutador simula múltiples páginas sin recarga.</p>
-          <p><strong>¿Cómo se editan los ficheros?</strong> Cada componente tiene su archivo TS, HTML y CSS. Usa data binding, directivas, pipes y servicios.</p>
-          <p><strong>¿Cómo se referencian ficheros desde otras apps?</strong> Normalmente despliegas la app Angular como estáticos; otras apps pueden consumirla vía proxies o iframes.</p>
+          <p><strong>¿Actúa sobre páginas, ficheros, secciones…?</strong><br>Angular trabaja con componentes, que son pequeñas piezas de interfaz. Cada componente tiene:
+          <ul>
+            <li>Un archivo TypeScript para la lógica (propiedades, métodos, ciclo de vida).</li>
+            <li>Un archivo HTML para la plantilla (vista).</li>
+            <li>Un archivo CSS opcional para estilos encapsulados.</li>
+          </ul>
+          Estos componentes se combinan en módulos, y el enrutador permite navegar entre ellos sin recargar la página, simulando múltiples secciones o “páginas internas”.</p>
+
+          <p><strong>¿Cómo se editan/modifican los ficheros?</strong><br>Simplemente abre los archivos TS, HTML o CSS del componente que quieras cambiar. Ajusta la lógica en el TS, la vista en el HTML y el estilo en el CSS. Usa data binding (p. ej., <code>{{variable}}</code>) y directivas como <code>*ngIf</code> y <code>*ngFor</code> para mostrar datos dinámicos o listas. Servicios inyectados ofrecen datos y lógica compartida.</p>
+
+          <p><strong>¿Cómo se referencian los ficheros desde otras aplicaciones?</strong><br>Normalmente, despliegas la aplicación Angular como un conjunto de archivos estáticos optimizados. Otras aplicaciones pueden interactuar con ella de diferentes maneras, por ejemplo, sirviéndola en una ruta específica del servidor. Angular no impone restricciones; su build final es puro HTML, CSS y JavaScript que cualquier servidor puede servir. Si otra app quiere integrar la app Angular, puede hacerlo mediante iframes, redirecciones o integración en la capa del servidor.</p>
         </div>
-        <button class="next-chapter-btn" onclick="siguienteCapitulo(5)">Siguiente</button>
       </div>
 
-      <!-- Capítulo 6: Conclusiones -->
+      <!-- 6. Conclusiones -->
       <div class="chapter" id="conclusiones">
         <div class="chapter-header">
           <span class="chapter-number">6</span>
           <h2>Conclusiones</h2>
         </div>
         <div class="chapter-body">
-          <p>Con estas bases, has conocido la justificación de Angular, cómo instalarlo, crear tu primer “Hola Mundo”, utilizar el framework, entender su funcionamiento interno y las conclusiones iniciales. Estás listo para temas más avanzados.</p>
+          <p>En este punto, has comprendido:
+          <ul>
+            <li><strong>La justificación de Angular:</strong> Por qué existe, qué problemas resuelve y en qué casos es útil.</li>
+            <li><strong>La instalación:</strong> Cómo preparar tu entorno para empezar a desarrollar con Angular.</li>
+            <li><strong>Los primeros pasos:</strong> Crear un proyecto, levantar el servidor de desarrollo y mostrar un “Hola Mundo”.</li>
+            <li><strong>La utilización del framework:</strong> Cómo generar componentes, configurar rutas, visualizar cambios en tiempo real y preparar la app para producción.</li>
+            <li><strong>El funcionamiento interno:</strong> Entender la arquitectura basada en componentes, módulos y enrutamiento, así como la forma de editar y referenciar ficheros.</li>
+          </ul>
+          Con estas bases, estás listo para adentrarte en temas más profundos. Angular es extenso: desde enrutamiento avanzado, consumo de APIs, optimización, pruebas y despliegue, hasta internacionalización, gestión de estado, animaciones y más. Lo aprendido aquí te da el trampolín para seguir creciendo y crear aplicaciones sólidas y mantenibles.</p>
         </div>
-        <button class="next-chapter-btn" onclick="siguienteCapitulo(6)">Siguiente</button>
       </div>
 
-      <!-- Resto de capítulos (7 a 20) -->
-      <div class="chapter" id="enrutamiento">
-        <div class="chapter-header">
-          <span class="chapter-number">7</span>
-          <h2>Enrutamiento</h2>
-        </div>
-        <div class="chapter-body">
-          <p>Aprende a configurar rutas, lazy loading y guards.</p>
-        </div>
-        <button class="next-chapter-btn" onclick="siguienteCapitulo(7)">Siguiente</button>
-      </div>
-
-      <div class="chapter" id="consumo-apis">
-        <div class="chapter-header">
-          <span class="chapter-number">8</span>
-          <h2>Consumo de APIs</h2>
-        </div>
-        <div class="chapter-body">
-          <p>Usa <code>HttpClient</code>, interceptors y manejo de errores para consumir APIs.</p>
-        </div>
-        <button class="next-chapter-btn" onclick="siguienteCapitulo(8)">Siguiente</button>
-      </div>
-
-      <div class="chapter" id="modulos-lazy">
-        <div class="chapter-header">
-          <span class="chapter-number">9</span>
-          <h2>Módulos y Lazy Loading</h2>
-        </div>
-        <div class="chapter-body">
-          <p>Organiza tu app en módulos y usa lazy loading para optimizar la carga.</p>
-        </div>
-        <button class="next-chapter-btn" onclick="siguienteCapitulo(9)">Siguiente</button>
-      </div>
-
-      <div class="chapter" id="directivas-pipes">
-        <div class="chapter-header">
-          <span class="chapter-number">10</span>
-          <h2>Directivas y Pipes</h2>
-        </div>
-        <div class="chapter-body">
-          <p>Crea directivas personalizadas y pipes para transformar datos en vistas.</p>
-        </div>
-        <button class="next-chapter-btn" onclick="siguienteCapitulo(10)">Siguiente</button>
-      </div>
-
-      <div class="chapter" id="pruebas">
-        <div class="chapter-header">
-          <span class="chapter-number">11</span>
-          <h2>Pruebas</h2>
-        </div>
-        <div class="chapter-body">
-          <p>Pruebas unitarias con Jasmine/Karma y E2E con Protractor.</p>
-        </div>
-        <button class="next-chapter-btn" onclick="siguienteCapitulo(11)">Siguiente</button>
-      </div>
-
-      <div class="chapter" id="despliegue">
-        <div class="chapter-header">
-          <span class="chapter-number">12</span>
-          <h2>Despliegue</h2>
-        </div>
-        <div class="chapter-body">
-          <p>Compila con <code>ng build</code> y sube los estáticos a un hosting.</p>
-        </div>
-        <button class="next-chapter-btn" onclick="siguienteCapitulo(12)">Siguiente</button>
-      </div>
-
-      <div class="chapter" id="seguridad">
-        <div class="chapter-header">
-          <span class="chapter-number">13</span>
-          <h2>Seguridad</h2>
-        </div>
-        <div class="chapter-body">
-          <p>Autenticación, JWT, guards y protección contra ataques XSS.</p>
-        </div>
-        <button class="next-chapter-btn" onclick="siguienteCapitulo(13)">Siguiente</button>
-      </div>
-
-      <div class="chapter" id="seo">
-        <div class="chapter-header">
-          <span class="chapter-number">14</span>
-          <h2>SEO</h2>
-        </div>
-        <div class="chapter-body">
-          <p>Angular Universal, metadatos y Open Graph para mejorar SEO.</p>
-        </div>
-        <button class="next-chapter-btn" onclick="siguienteCapitulo(14)">Siguiente</button>
-      </div>
-
-      <div class="chapter" id="internacionalizacion">
-        <div class="chapter-header">
-          <span class="chapter-number">15</span>
-          <h2>Internacionalización</h2>
-        </div>
-        <div class="chapter-body">
-          <p>Traduce la app a varios idiomas con @angular/localize.</p>
-        </div>
-        <button class="next-chapter-btn" onclick="siguienteCapitulo(15)">Siguiente</button>
-      </div>
-
-      <div class="chapter" id="rendimiento">
-        <div class="chapter-header">
-          <span class="chapter-number">16</span>
-          <h2>Rendimiento</h2>
-        </div>
-        <div class="chapter-body">
-          <p>Optimiza usando OnPush, lazy loading y analizadores de rendimiento.</p>
-        </div>
-        <button class="next-chapter-btn" onclick="siguienteCapitulo(16)">Siguiente</button>
-      </div>
-
-      <div class="chapter" id="accesibilidad">
-        <div class="chapter-header">
-          <span class="chapter-number">17</span>
-          <h2>Accesibilidad</h2>
-        </div>
-        <div class="chapter-body">
-          <p>Cumple estándares ARIA, roles y soporte para teclado.</p>
-        </div>
-        <button class="next-chapter-btn" onclick="siguienteCapitulo(17)">Siguiente</button>
-      </div>
-
-      <div class="chapter" id="gestion-estado">
-        <div class="chapter-header">
-          <span class="chapter-number">18</span>
-          <h2>Gestión de Estado</h2>
-        </div>
-        <div class="chapter-body">
-          <p>Usa NgRx u otras librerías para manejo de estado global tipo Redux.</p>
-        </div>
-        <button class="next-chapter-btn" onclick="siguienteCapitulo(18)">Siguiente</button>
-      </div>
-
-      <div class="chapter" id="animaciones">
-        <div class="chapter-header">
-          <span class="chapter-number">19</span>
-          <h2>Animaciones</h2>
-        </div>
-        <div class="chapter-body">
-          <p>Agregar animaciones con @angular/animations para transiciones suaves.</p>
-        </div>
-        <button class="next-chapter-btn" onclick="siguienteCapitulo(19)">Siguiente</button>
-      </div>
-
-      <div class="chapter" id="herramientas">
-        <div class="chapter-header">
-          <span class="chapter-number">20</span>
-          <h2>Herramientas</h2>
-        </div>
-        <div class="chapter-body">
-          <p>CLI, Angular Console, Language Service y librerías de componentes.</p>
-        </div>
-        <button class="next-chapter-btn" onclick="siguienteCapitulo(20)">Siguiente</button>
-      </div>
     </div>
   </div>
 
