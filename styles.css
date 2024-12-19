@@ -5,7 +5,8 @@ html, body {
   color: #fff;
   font-family: 'Press Start 2P', cursive;
   font-size: 14px;
-  line-height: 1.6; /* Mejor line-height para legibilidad */
+  line-height: 1.8; /* Mayor line-height para legibilidad */
+  letter-spacing: 0.5px; /* Espacio ligeramente mayor entre letras */
 }
 
 a {
@@ -17,11 +18,17 @@ a:hover {
   color: #ffec27;
 }
 
+/* Barra superior fija */
 .top-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1em;
+  background: #181830;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  border-bottom: 2px solid #444;
 }
 
 .logo .brand {
@@ -32,7 +39,8 @@ a:hover {
 .main-menu {
   list-style: none;
   display: flex;
-  gap: 2em;
+  gap: 1em;
+  flex-wrap: wrap;
 }
 
 .main-menu li a {
@@ -79,6 +87,7 @@ a:hover {
   margin-bottom: 2em;
   max-width: 600px;
   margin: 0 auto 2em;
+  letter-spacing: 0.5px;
 }
 
 .start-button {
@@ -88,6 +97,7 @@ a:hover {
   border: none;
   cursor: pointer;
   font-size: 0.8em;
+  display: inline-block;
 }
 
 .start-button:hover {
@@ -102,8 +112,9 @@ a:hover {
   gap: 2em;
 }
 
+/* Ahora no hay sidebar, sólo contenido principal */
 .course-content {
-  flex: 3;
+  flex: 1;
 }
 
 .chapter {
@@ -143,6 +154,15 @@ a:hover {
   font-size: 0.8em;
   color: #ccc;
   margin-bottom: 1em;
+  letter-spacing: 0.5px;
+}
+
+.chapter-body code {
+  background: #0f0f1f;
+  color: #73dfff;
+  padding: 0.2em 0.4em;
+  border: 1px solid #333;
+  letter-spacing: 0.5px;
 }
 
 .next-chapter-btn {
@@ -152,106 +172,12 @@ a:hover {
   padding: 0.5em 1em;
   font-size: 0.7em;
   cursor: pointer;
+  display: inline-block;
+  margin-top: 1em;
 }
 
 .next-chapter-btn:hover {
   background: #5ac0e6;
-}
-
-.sidebar {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 2em;
-}
-
-.user-profile {
-  background: #181830;
-  border: 1px solid #333;
-  padding: 1em;
-  text-align: center;
-}
-
-.user-avatar {
-  border-radius: 50%;
-  margin-bottom: 0.5em;
-}
-
-.user-info {
-  margin-bottom: 1em;
-}
-
-.user-name {
-  display: block;
-  color: #ffec27;
-  font-size: 0.9em;
-  margin-bottom: 0.3em;
-}
-
-.user-level {
-  font-size: 0.7em;
-  color: #ccc;
-}
-
-.view-profile {
-  background: #73dfff;
-  border: none;
-  color: #0f0f1f;
-  padding: 0.5em 1em;
-  font-size: 0.7em;
-  cursor: pointer;
-  margin-top: 0.5em;
-}
-
-.view-profile:hover {
-  background: #5ac0e6;
-}
-
-.course-progress, .course-badges {
-  background: #181830;
-  border: 1px solid #333;
-  padding: 1em;
-  font-size: 0.7em;
-}
-
-.course-progress h3, .course-badges h3 {
-  font-size: 0.8em;
-  margin-bottom: 1em;
-  color: #73dfff;
-}
-
-.progress-scroll {
-  max-height: 120px;
-  overflow-y: auto;
-  border: 1px solid #333;
-  padding: 0.5em;
-  background: #0f0f1f;
-}
-
-.progress-scroll p {
-  margin-bottom: 1em;
-}
-
-.course-badges p {
-  margin-bottom: 1em;
-}
-
-.badges-grid {
-  display: flex;
-  gap: 0.5em;
-  flex-wrap: wrap;
-}
-
-.badge-slot {
-  background: #0f0f1f;
-  border: 1px solid #333;
-  width: 30px;
-  height: 30px;
-  color: #444;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.7em;
 }
 
 .retro-footer {
@@ -262,13 +188,15 @@ a:hover {
   border-top: 1px solid #444;
   font-size: 0.7em;
   margin-top: 2em;
+  letter-spacing: 0.5px;
 }
 
 @media (max-width: 800px) {
-  .main-container {
-    flex-direction: column;
+  .main-menu {
+    justify-content: center;
   }
-  .sidebar {
-    order: -1;
+
+  .hero-subtitle {
+    font-size: 0.7em;
   }
 }
