@@ -1,89 +1,155 @@
+/* Estilos base y tipografía */
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
-  background: #f7f7f7;
+  background: #fdfdfd;
   color: #333;
+  line-height: 1.6em;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+}
+
+p, li {
+  font-size: 1em;
+  color: #444;
+}
+
+/* Encabezado */
 header {
-  background: #1976d2;
+  background: linear-gradient(120deg, #1976d2, #dd0031);
   color: #fff;
   padding: 2em;
   text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: relative;
 }
 
-.subtitle {
-  font-size: 1.2em;
-  margin: 0.5em 0 0;
+header .subtitle {
+  font-size: 1.1em;
+  margin-top: 0.5em;
+  color: #fefefe;
 }
 
+/* Sidebar */
 .sidebar {
   position: fixed;
   left: 0;
   top: 0;
   bottom: 0;
-  width: 240px;
+  width: 250px;
   background: #ffffff;
-  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  background: linear-gradient(to bottom, #f7f7f7, #ffffff);
+  box-shadow: 2px 0 10px rgba(0,0,0,0.05);
   padding: 2em 1em;
   overflow-y: auto;
+  border-right: 1px solid #ebebeb;
 }
 
 .sidebar h2 {
   font-size: 1.2em;
   margin-top: 0;
+  color: #1976d2;
+  text-align: center;
+  border-bottom: 2px solid #1976d2;
+  padding-bottom: 0.5em;
+  margin-bottom: 1.5em;
+  font-weight: 700;
 }
 
 .sidebar ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .sidebar ul li {
-  margin: 0.7em 0;
+  margin: 0.8em 0;
 }
 
 .sidebar a {
   text-decoration: none;
   color: #1976d2;
-  font-weight: 400;
+  font-weight: 500;
+  display: inline-block;
+  transition: color 0.3s, padding-left 0.3s;
 }
 
 .sidebar a:hover {
-  text-decoration: underline;
+  color: #dd0031;
+  padding-left: 5px;
 }
 
+/* Área principal */
 main {
-  margin-left: 260px;
+  margin-left: 270px;
   padding: 2em;
+  max-width: 1000px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 main h2 {
   border-bottom: 2px solid #1976d2;
   padding-bottom: 0.3em;
+  font-size: 1.6em;
   margin-top: 2em;
-  font-size: 1.5em;
+  color: #1976d2;
 }
 
 main h3 {
   margin-top: 1.5em;
   font-weight: 700;
-  color: #1976d2;
+  color: #dd0031;
 }
 
-p, li {
-  line-height: 1.6em;
+/* Listas dentro de contenido */
+article ul {
+  margin-left: 1.5em;
+  list-style: disc;
 }
 
+article li {
+  margin-bottom: 0.5em;
+}
+
+/* Código y preformatos */
 pre, code {
-  background: #eee;
-  padding: 0.5em;
   display: block;
   margin: 1em 0;
+  background: #2e3440;
+  color: #d8dee9;
+  padding: 1em;
+  border-radius: 5px;
+  font-size: 0.95em;
+  font-family: Consolas, Monaco, 'Courier New', monospace;
   overflow-x: auto;
-  font-size: 0.9em;
 }
 
+pre code {
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  color: inherit;
+}
+
+/* Enlaces */
+main a {
+  color: #1976d2;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+main a:hover {
+  color: #dd0031;
+  text-decoration: underline;
+}
+
+/* Footer */
 footer {
   text-align: center;
   padding: 1em;
@@ -91,22 +157,33 @@ footer {
   margin-top: 4em;
   font-size: 0.9em;
   color: #666;
+  border-top: 1px solid #ebebeb;
 }
 
-article ul {
-  margin-left: 1.5em;
-  list-style: disc;
+/* Responsivo */
+@media (max-width: 992px) {
+  main {
+    max-width: 90%;
+  }
 }
 
 @media (max-width: 768px) {
   .sidebar {
     position: relative;
     width: 100%;
+    height: auto;
+    border-right: none;
     box-shadow: none;
+    background: linear-gradient(to bottom, #f0f0f0, #ffffff);
   }
-
+  
   main {
     margin: 0;
-    padding: 1em;
+    padding: 1.5em;
+    max-width: 100%;
+  }
+
+  header {
+    text-align: center;
   }
 }
