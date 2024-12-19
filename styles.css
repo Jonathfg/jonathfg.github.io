@@ -1,28 +1,9 @@
-/* Fuente base y reset básico */
 html, body {
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
-  background: #ffffff;
-  color: #333;
-}
-
-/* Estilos generales de tipografía */
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 700;
-  margin-top: 1.2em;
-  margin-bottom: 0.5em;
-  line-height: 1.2em;
-}
-
-p, li {
-  font-size: 1em;
-  line-height: 1.6em;
-  color: #444;
-}
-
-strong {
-  color: #222;
+  background: #1b1b1b;
+  color: #ccc;
 }
 
 /* ENCABEZADO */
@@ -30,140 +11,100 @@ header {
   background: linear-gradient(135deg, #dd0031 0%, #c2002d 100%);
   color: #fff;
   text-align: center;
-  padding: 2em 1em;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 2.5em 1em;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
   position: relative;
 }
 
 header h1 {
   margin: 0;
-  font-size: 2em;
+  font-size: 2.4em;
+  text-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 header .subtitle {
   font-size: 1.2em;
   margin-top: 0.5em;
   font-weight: 400;
-  color: #f9f9f9;
+  color: #f0f0f0;
 }
 
-/* Enlace del encabezado para volver al inicio */
-.header-logo-link {
-  text-decoration: none;
-  color: #fff;
-  display: inline-block;
-  position: relative;
-  padding-left: 50px;
+/* NAVBAR - Menú horizontal */
+.navbar {
+  background: linear-gradient(to right, #111, #222);
+  padding: 0.5em;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.6);
+  border-top: 2px solid #dd0031;
 }
 
-.header-logo-link:hover h1 {
-  text-decoration: underline;
+.navbar h2 {
+  display: none;
 }
 
-/* Logo como pseudo-elemento */
-.header-logo-link::before {
-  content: "";
-  background-image: url('https://angular.io/assets/images/logos/angular/angular.svg'); /* Reemplazar con la URL o ruta del logo deseado */
-  background-size: cover;
-  background-position: center;
-  width: 40px;
-  height: 40px;
-  display: inline-block;
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-/* SIDEBAR (NAV) */
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 250px;
-  overflow-y: auto;
-  background: #f9f9f9;
-  border-right: 1px solid #ddd;
-  box-shadow: 2px 0 10px rgba(0,0,0,0.05);
-  padding: 1em;
-}
-
-.sidebar h2 {
-  font-size: 1.4em;
-  text-align: center;
-  margin-top: 0;
-  margin-bottom: 1em;
-  color: #dd0031;
-  border-bottom: 2px solid #dd0031;
-  padding-bottom: 0.5em;
-}
-
-.sidebar ul {
+.navbar ul {
   list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
-.sidebar ul li {
-  margin: 1em 0;
-}
-
-.sidebar ul li a {
-  text-decoration: none;
-  color: #1976d2;
-  font-weight: 500;
-  font-size: 1em;
+.navbar ul li {
   display: inline-block;
-  padding: 0.3em 0.5em;
-  border-radius: 4px;
-  transition: background 0.3s, padding-left 0.3s, color 0.3s;
+  margin: 0 1em;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #a0f4a0;
+  font-weight: 500;
+  font-size: 1.1em;
+  padding: 0.5em 0.3em;
   position: relative;
+  transition: color 0.3s, text-shadow 0.3s;
 }
 
-.sidebar ul li a::before {
-  content: "»";
-  color: #555;
-  margin-right: 0.5em;
-  transition: color 0.3s;
-}
-
-.sidebar ul li a:hover {
-  background: #ececec;
-  padding-left: 0.7em;
-  color: #dd0031;
-}
-
-.sidebar ul li a:hover::before {
-  color: #dd0031;
+.navbar ul li a:hover {
+  color: #58ff58;
+  text-shadow: 0 0 5px #58ff58;
 }
 
 /* MAIN CONTENT */
 main {
-  margin-left: 270px;
-  padding: 2em;
-  max-width: 900px;
-  margin-right: auto;
-  margin-left: auto;
+  max-width: 1000px;
+  margin: 2em auto;
+  padding: 1em;
+  background: #1b1b1b;
 }
 
 /* TITULOS DE SECCIÓN */
 main h2 {
   font-size: 1.8em;
-  color: #1976d2;
-  border-bottom: 2px solid #1976d2;
+  color: #58ff58;
+  border-bottom: 2px solid #58ff58;
   padding-bottom: 0.3em;
+  margin-top: 2em;
+  text-shadow: 0 0 5px #58ff58;
 }
 
 main h3 {
-  color: #dd0031;
+  color: #42a5f5;
   margin-top: 1.5em;
+  text-shadow: 0 0 5px #42a5f5;
 }
 
 /* LISTAS */
 article ul {
   margin-left: 1.5em;
   list-style: disc;
+  color: #ccc;
+}
+
+article li {
+  margin-bottom: 0.5em;
+}
+
+strong {
+  color: #eee;
 }
 
 /* CODIGO */
@@ -180,6 +121,7 @@ pre {
   padding: 1em;
   overflow-x: auto;
   margin: 1em 0;
+  box-shadow: 0 0 10px rgba(0,0,0,0.7);
 }
 
 code {
@@ -190,58 +132,46 @@ code {
 
 /* ENLACES EN CONTENIDO */
 main a {
-  color: #1976d2;
+  color: #42a5f5;
   text-decoration: none;
-  border-bottom: 1px dotted #1976d2;
+  border-bottom: 1px dotted #42a5f5;
   transition: color 0.3s, border-bottom-color 0.3s;
 }
 
 main a:hover {
-  color: #dd0031;
-  border-bottom-color: #dd0031;
+  color: #58ff58;
+  border-bottom-color: #58ff58;
+  text-shadow: 0 0 5px #58ff58;
 }
 
 /* FOOTER */
 footer {
   text-align: center;
   padding: 1em;
-  background: #fafafa;
+  background: #111;
   color: #666;
-  border-top: 1px solid #ddd;
+  border-top: 2px solid #dd0031;
   margin-top: 4em;
   font-size: 0.9em;
 }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-  .sidebar {
-    position: relative;
-    width: 100%;
-    height: auto;
-    box-shadow: none;
-    border-right: none;
+  .navbar ul li {
+    display: block;
+    margin: 0.5em 0;
   }
 
   main {
-    margin-left: 0;
-    max-width: 95%;
     padding: 1em;
+    margin: 1em;
   }
 
   header h1 {
-    font-size: 1.6em;
+    font-size: 1.8em;
   }
 
-  .sidebar h2 {
-    font-size: 1.2em;
-  }
-
-  .header-logo-link {
-    padding-left: 40px;
-  }
-
-  .header-logo-link::before {
-    width: 30px;
-    height: 30px;
+  main h2 {
+    font-size: 1.5em;
   }
 }
