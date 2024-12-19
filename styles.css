@@ -32,6 +32,7 @@ header {
   text-align: center;
   padding: 2em 1em;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  position: relative;
 }
 
 header h1 {
@@ -44,6 +45,34 @@ header .subtitle {
   margin-top: 0.5em;
   font-weight: 400;
   color: #f9f9f9;
+}
+
+/* Enlace del encabezado para volver al inicio */
+.header-logo-link {
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+  position: relative;
+  padding-left: 50px;
+}
+
+.header-logo-link:hover h1 {
+  text-decoration: underline;
+}
+
+/* Logo como pseudo-elemento */
+.header-logo-link::before {
+  content: "";
+  background-image: url('https://angular.io/assets/images/logos/angular/angular.svg'); /* Reemplazar con la URL o ruta del logo deseado */
+  background-size: cover;
+  background-position: center;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 /* SIDEBAR (NAV) */
@@ -205,5 +234,14 @@ footer {
 
   .sidebar h2 {
     font-size: 1.2em;
+  }
+
+  .header-logo-link {
+    padding-left: 40px;
+  }
+
+  .header-logo-link::before {
+    width: 30px;
+    height: 30px;
   }
 }
