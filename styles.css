@@ -9,6 +9,20 @@ html, body {
   line-height: 1.6;
 }
 
+/* Destacar inline code */
+code {
+  color: #ffec27;
+  background: #000;
+  padding: 0 0.3em;
+  border-radius: 2px;
+}
+
+/* Destacar preguntas como ¿Qué aplicaciones tiene?, etc. */
+.chapter-body p strong {
+  color: #ffec27;
+  font-size: 1.05em; /* Un poco más grande para destacar */
+}
+
 /* Enlaces */
 a {
   text-decoration: none;
@@ -24,7 +38,7 @@ a:hover {
   position: sticky;
   top: 0;
   z-index: 999;
-  background: rgba(0,0,0,0.8);
+  background: #181830; /* Opaca, ya no se ve la imagen detrás */
   padding: 1em;
   display: flex;
   justify-content: space-between;
@@ -57,10 +71,10 @@ a:hover {
   position: relative;
   background: url('imagen_banner.jpg') no-repeat center top;
   background-size: contain;
-  background-color: #000; /* Por si la imagen no carga */
+  background-color: #000; 
   text-align: center;
   padding: 8em 1em 3em;
-  min-height: 400px; /* Altura mínima */
+  min-height: 400px;
 }
 
 .hero-content {
@@ -124,6 +138,7 @@ a:hover {
   background: rgba(0,0,0,0.5);
   border: 1px solid #444;
   border-radius: 6px;
+  min-height: 2000px; /* Para asegurar que haya scroll y ver el menú fijo */
 }
 
 /* Secciones (capítulos) */
