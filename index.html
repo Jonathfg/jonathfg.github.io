@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Curso de Angular Retro - Inspirado en Codedex</title>
+  <title>Guía Completa de Angular - Retro Style</title>
   <link rel="stylesheet" href="styles.css"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,92 +14,278 @@
   <header class="hero-section">
     <nav class="top-nav">
       <div class="logo">
-        <!-- Reemplaza por tu logo -->
-        <span class="brand">Códedex Retro</span>
+        <span class="brand">Angular Retro</span>
       </div>
       <ul class="main-menu">
-        <li><a href="#">Learn</a></li>
-        <li><a href="#">Practice</a></li>
-        <li><a href="#">Community</a></li>
-        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#justificacion">Tutorial</a></li>
       </ul>
-      <button class="sign-up-btn">Sign Up</button>
     </nav>
     <div class="hero-content">
       <span class="course-level">BEGINNER COURSE</span>
       <h1>Angular</h1>
-      <p class="hero-subtitle">Aprende componentes, servicios y enrutamiento para crear aplicaciones web dinámicas y escalables.</p>
-      <button class="start-button">Start Learning for Free</button>
+      <p class="hero-subtitle">Aprende a dominar Angular desde los fundamentos hasta conceptos avanzados, con un toque retro.</p>
+      <button class="start-button">Comenzar el Tutorial</button>
     </div>
   </header>
 
   <div class="main-container">
     <div class="course-content">
+      <!-- Aquí listamos 20 capítulos. Los primeros 6 son los requeridos -->
+      <!-- 1. Justificación del Framework -->
       <div class="chapter">
         <div class="chapter-header">
           <span class="chapter-number">1</span>
-          <h2>Introducción a Angular</h2>
+          <h2>Justificación del Framework</h2>
         </div>
         <div class="chapter-body">
-          <p>Aprende a escribir tu primer componente, entender la arquitectura del framework y el ciclo de vida de tu aplicación.</p>
-          <div class="exercises">
-            <div class="exercise">
-              <span class="exercise-title">Exercise 1</span>
-              <span class="exercise-name">Set Up</span>
-              <button class="start-exercise">Start</button>
-            </div>
-            <div class="exercise locked">
-              <span class="exercise-title">Exercise 2</span>
-              <span class="exercise-name">Hello World</span>
-              <span class="locked-icon">???</span>
-            </div>
-            <div class="exercise locked">
-              <span class="exercise-title">Exercise 3</span>
-              <span class="exercise-name">Components</span>
-              <span class="locked-icon">???</span>
-            </div>
-            <!-- Añade más ejercicios según necesites -->
-          </div>
-          <div class="bonus">
-            <span>Bonus Article</span>
-            <span>Completa el capítulo para desbloquear</span>
-          </div>
+          <p><strong>¿Para qué sirve?</strong> Angular sirve para desarrollar aplicaciones web modernas, dinámicas y escalables, ofreciendo una arquitectura sólida y componentes reutilizables.</p>
+          <p><strong>¿Qué aplicaciones tiene?</strong> Desde paneles internos de administración, aplicaciones de una sola página (SPAs), e-commerce, hasta aplicaciones móviles híbridas con Ionic.</p>
+          <p><strong>¿Sobre qué lenguajes se apoya?</strong> Principalmente en TypeScript, además de HTML y CSS para la vista y el estilo.</p>
+          <p><strong>¿Qué prerrequisitos necesita?</strong> Conocimientos básicos de HTML, CSS, JavaScript, disposición para aprender TypeScript, y tener instalado Node.js y npm.</p>
         </div>
       </div>
 
+      <!-- 2. Instalación -->
       <div class="chapter">
         <div class="chapter-header">
           <span class="chapter-number">2</span>
-          <h2>Enrutamiento</h2>
+          <h2>Instalación</h2>
         </div>
-        <!-- Contenido simulado -->
+        <div class="chapter-body">
+          <p><strong>¿Se precisa instalación?</strong> Sí, necesitas Node.js, npm y Angular CLI.</p>
+          <p><strong>Pasos para la instalación:</strong> <code>npm install -g @angular/cli</code>, verifica con <code>ng version</code>.</p>
+          <p><strong>Versiones necesarias:</strong> Usa la versión LTS de Node.js y la última versión estable de Angular.</p>
+          <p><strong>Rutas a tener en cuenta:</strong> <code>src/app</code> para componentes, <code>src/assets</code> para estáticos, <code>src/environments</code> para configuraciones.</p>
+          <p><strong>Variables de entorno:</strong> No obligatorias, pero puedes usarlas para endpoints u otras configuraciones.</p>
+          <p><strong>¿Necesita base de datos?</strong> No directamente, Angular consume APIs externas.</p>
+        </div>
       </div>
 
-      <!-- Más capítulos... -->
+      <!-- 3. Primeros Pasos -->
+      <div class="chapter">
+        <div class="chapter-header">
+          <span class="chapter-number">3</span>
+          <h2>Primeros pasos</h2>
+        </div>
+        <div class="chapter-body">
+          <p><strong>“Hola Mundo”:</strong> Crea un proyecto con <code>ng new mi-primera-app</code>, ejecuta <code>ng serve --open</code> y edita <code>app.component.html</code> para mostrar “¡Hola Mundo desde Angular!”</p>
+        </div>
+      </div>
+
+      <!-- 4. Utilización del framework -->
+      <div class="chapter">
+        <div class="chapter-header">
+          <span class="chapter-number">4</span>
+          <h2>Utilización del Framework</h2>
+        </div>
+        <div class="chapter-body">
+          <p><strong>¿Cómo crear una aplicación base?</strong> Usa componentes generados con CLI, define rutas, servicios y vistas.</p>
+          <p><strong>¿Cómo visualizar resultados?</strong> Con <code>ng serve</code> en <code>http://localhost:4200</code>, con recarga en vivo. Para producción, <code>ng build --configuration production</code>.</p>
+        </div>
+      </div>
+
+      <!-- 5. Explicación del funcionamiento -->
+      <div class="chapter">
+        <div class="chapter-header">
+          <span class="chapter-number">5</span>
+          <h2>Explicación del funcionamiento</h2>
+        </div>
+        <div class="chapter-body">
+          <p><strong>¿Actúa sobre páginas, ficheros, secciones…?</strong> Angular usa componentes para secciones de la interfaz, módulos para agruparlos, y enrutamiento para simular páginas sin recargas completas.</p>
+          <p><strong>¿Cómo se editan los ficheros?</strong> Cada componente tiene un TS (lógica), HTML (vista) y CSS (estilo). Edita según requieras, recarga en vivo.</p>
+          <p><strong>¿Referenciar ficheros desde otras apps?</strong> Normalmente Angular se sirve como estáticos finales. Otras apps pueden consumirlo vía iframes o integrarlo en su entorno.</p>
+        </div>
+      </div>
+
+      <!-- 6. Conclusiones -->
+      <div class="chapter">
+        <div class="chapter-header">
+          <span class="chapter-number">6</span>
+          <h2>Conclusiones</h2>
+        </div>
+        <div class="chapter-body">
+          <p>Has aprendido la justificación de Angular, su instalación, primeros pasos, uso, funcionamiento interno y entendido el alcance del tutorial. Con estas bases, puedes comenzar a crear apps complejas con Angular.</p>
+        </div>
+      </div>
+
+      <!-- A partir de aquí agregamos 14 apartados adicionales -->
+      <!-- 7. Enrutamiento -->
+      <div class="chapter">
+        <div class="chapter-header">
+          <span class="chapter-number">7</span>
+          <h2>Enrutamiento</h2>
+        </div>
+        <div class="chapter-body">
+          <p>Aprende a configurar rutas en <code>app-routing.module.ts</code> y navegar entre secciones sin recargar la página.</p>
+        </div>
+      </div>
+
+      <!-- 8. Consumo de APIs -->
+      <div class="chapter">
+        <div class="chapter-header">
+          <span class="chapter-number">8</span>
+          <h2>Consumo de APIs</h2>
+        </div>
+        <div class="chapter-body">
+          <p>Utiliza <code>HttpClient</code> para hacer peticiones a servicios externos y mostrar datos dinámicos en la interfaz.</p>
+        </div>
+      </div>
+
+      <!-- 9. Módulos y Lazy Loading -->
+      <div class="chapter">
+        <div class="chapter-header">
+          <span class="chapter-number">9</span>
+          <h2>Módulos y Lazy Loading</h2>
+        </div>
+        <div class="chapter-body">
+          <p>Divide tu app en módulos y usa lazy loading para mejorar el rendimiento cargando módulos bajo demanda.</p>
+        </div>
+      </div>
+
+      <!-- 10. Directivas y Pipes -->
+      <div class="chapter">
+        <div class="chapter-header">
+          <span class="chapter-number">10</span>
+          <h2>Directivas y Pipes</h2>
+        </div>
+        <div class="chapter-body">
+          <p>Las directivas manipulan el DOM y los pipes transforman datos en la vista. Crea tus propias directivas y pipes personalizados.</p>
+        </div>
+      </div>
+
+      <!-- 11. Pruebas (Testing) -->
+      <div class="chapter">
+        <div class="chapter-header">
+          <span class="chapter-number">11</span>
+          <h2>Pruebas (Testing)</h2>
+        </div>
+        <div class="chapter-body">
+          <p>Aprende a escribir pruebas unitarias con Jasmine y Karma, asegurando la calidad del código. Usa <code>ng test</code> para ejecutarlas.</p>
+        </div>
+      </div>
+
+      <!-- 12. Despliegue -->
+      <div class="chapter">
+        <div class="chapter-header">
+          <span class="chapter-number">12</span>
+          <h2>Despliegue</h2>
+        </div>
+        <div class="chapter-body">
+          <p>Compila con <code>ng build --configuration production</code> y despliega los archivos generados en un servidor estático.</p>
+        </div>
+      </div>
+
+      <!-- 13. Seguridad y Autenticación -->
+      <div class="chapter">
+        <div class="chapter-header">
+          <span class="chapter-number">13</span>
+          <h2>Seguridad y Autenticación</h2>
+        </div>
+        <div class="chapter-body">
+          <p>Implementa autenticación con JWT, protege rutas con guardas y evita vulnerabilidades XSS mediante binding seguro.</p>
+        </div>
+      </div>
+
+      <!-- 14. SEO y Metadatos -->
+      <div class="chapter">
+        <div class="chapter-header">
+          <span class="chapter-number">14</span>
+          <h2>SEO y Metadatos</h2>
+        </div>
+        <div class="chapter-body">
+          <p>Usa Angular Universal para renderizado del lado del servidor y mejora el SEO. Añade metadatos para optimizar la visibilidad.</p>
+        </div>
+      </div>
+
+      <!-- 15. Internacionalización -->
+      <div class="chapter">
+        <div class="chapter-header">
+          <span class="chapter-number">15</span>
+          <h2>Internacionalización</h2>
+        </div>
+        <div class="chapter-body">
+          <p>Traduce tu app a múltiples idiomas con <code>@angular/localize</code>, generando builds para cada locale.</p>
+        </div>
+      </div>
+
+      <!-- 16. Rendimiento y Optimización -->
+      <div class="chapter">
+        <div class="chapter-header">
+          <span class="chapter-number">16</span>
+          <h2>Rendimiento y Optimización</h2>
+        </div>
+        <div class="chapter-body">
+          <p>Mejora la performance con lazy loading, OnPush Change Detection y evaluando métricas con Lighthouse.</p>
+        </div>
+      </div>
+
+      <!-- 17. Accesibilidad -->
+      <div class="chapter">
+        <div class="chapter-header">
+          <span class="chapter-number">17</span>
+          <h2>Accesibilidad</h2>
+        </div>
+        <div class="chapter-body">
+          <p>Haz tu app usable para todos. Usa roles ARIA, texto alternativo, y asegúrate de un buen contraste y navegación por teclado.</p>
+        </div>
+      </div>
+
+      <!-- 18. Gestión de Estado -->
+      <div class="chapter">
+        <div class="chapter-header">
+          <span class="chapter-number">18</span>
+          <h2>Gestión de Estado</h2>
+        </div>
+        <div class="chapter-body">
+          <p>Usa NgRx u otras librerías para gestionar el estado global de la app, facilitando la escalabilidad y mantenibilidad.</p>
+        </div>
+      </div>
+
+      <!-- 19. Animaciones -->
+      <div class="chapter">
+        <div class="chapter-header">
+          <span class="chapter-number">19</span>
+          <h2>Animaciones</h2>
+        </div>
+        <div class="chapter-body">
+          <p>Crea transiciones y efectos visuales con <code>@angular/animations</code> para mejorar la experiencia de usuario.</p>
+        </div>
+      </div>
+
+      <!-- 20. Herramientas del Ecosistema -->
+      <div class="chapter">
+        <div class="chapter-header">
+          <span class="chapter-number">20</span>
+          <h2>Herramientas del Ecosistema</h2>
+        </div>
+        <div class="chapter-body">
+          <p>Aprovecha Angular CLI, Angular Language Service, bibliotecas de componentes (Material, PrimeNG) y más para acelerar el desarrollo.</p>
+        </div>
+      </div>
     </div>
 
     <aside class="sidebar">
       <div class="user-profile">
         <img class="user-avatar" src="https://via.placeholder.com/60" alt="Avatar">
         <div class="user-info">
-          <span class="user-name">Your Name</span>
-          <span class="user-level">Level 1</span>
+          <span class="user-name">Tu Nombre</span>
+          <span class="user-level">Nivel 1</span>
         </div>
-        <button class="view-profile">View Profile</button>
+        <button class="view-profile">Ver Perfil</button>
       </div>
 
       <div class="course-progress">
-        <h3>Course Progress</h3>
-        <p>Exercises: 0/44</p>
-        <p>Projects Completed: 0/2</p>
-        <p>XP Earned: 0/765</p>
+        <h3>Progreso del Curso</h3>
+        <p>Ejercicios: 0/44</p>
+        <p>Proyectos Completados: 0/2</p>
+        <p>XP Obtenida: 0/765</p>
       </div>
 
       <div class="course-badges">
-        <h3>Course Badges</h3>
-        <p>Complete a chapter to earn a badge</p>
+        <h3>Insignias del Curso</h3>
+        <p>Completa capítulos para ganar insignias</p>
         <div class="badges-grid">
-          <!-- Placeholder for badges -->
           <div class="badge-slot">?</div>
           <div class="badge-slot">?</div>
           <div class="badge-slot">?</div>
@@ -110,7 +296,7 @@
   </div>
 
   <footer class="retro-footer">
-    <p>© 2024 - Inspirado en Codedex - Retro Angular Course</p>
+    <p>© 2024 - Guía Completa de Angular Retro</p>
   </footer>
 </body>
 </html>
