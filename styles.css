@@ -9,18 +9,21 @@ html, body {
   line-height: 1.6;
 }
 
-/* Destacar inline code */
+/* Destacar inline code (app.module.ts, etc.) */
 code {
   color: #ffec27;
-  background: #000;
-  padding: 0 0.3em;
-  border-radius: 2px;
+  background: none;
+  padding: 0;
+  border: none;
+  font-weight: bold;
 }
 
-/* Destacar preguntas como ¿Qué aplicaciones tiene?, etc. */
+/* Destacar preguntas como ¿Qué aplicaciones tiene?, etc. 
+   Ya estaban con strong, ahora ajustamos un poco más */
 .chapter-body p strong {
   color: #ffec27;
-  font-size: 1.05em; /* Un poco más grande para destacar */
+  font-size: 1.1em; /* Un poco más grande para destacar aún más */
+  text-decoration: underline; /* Subrayado sutil */
 }
 
 /* Enlaces */
@@ -37,8 +40,8 @@ a:hover {
 .top-nav {
   position: sticky;
   top: 0;
-  z-index: 999;
-  background: #181830; /* Opaca, ya no se ve la imagen detrás */
+  z-index: 1000; /* Aumentamos z-index */
+  background: #181830; /* Opaca, sin transparencia */
   padding: 1em;
   display: flex;
   justify-content: space-between;
@@ -69,6 +72,7 @@ a:hover {
 /* Hero section con imagen ajustada */
 .hero-section {
   position: relative;
+  margin-top: 80px; /* Espacio para que no se superponga con la nav */
   background: url('imagen_banner.jpg') no-repeat center top;
   background-size: contain;
   background-color: #000; 
@@ -138,7 +142,7 @@ a:hover {
   background: rgba(0,0,0,0.5);
   border: 1px solid #444;
   border-radius: 6px;
-  min-height: 2000px; /* Para asegurar que haya scroll y ver el menú fijo */
+  min-height: 2000px; /* Para asegurar scroll y ver el menú fijo */
 }
 
 /* Secciones (capítulos) */
@@ -212,11 +216,14 @@ a:hover {
   cursor: pointer;
   border-radius: 3px;
   text-transform: uppercase;
+  /* Un poco más bonito: sombra sutil */
+  box-shadow: 0 0 5px rgba(0,0,0,0.5);
 }
 
 .copy-btn:hover {
   background: #ffec27;
   color: #181830;
+  box-shadow: none;
 }
 
 .code-block pre {
