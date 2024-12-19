@@ -2,35 +2,35 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
-  color: #4a3320; /* marrón oscuro para el texto */
-  background: linear-gradient(to bottom, #fce9c9, #fcd9a8, #f8c98f); /* degradado cálido suave */
+  background: #1e1e1e; /* Un gris oscuro pero no negro puro */
+  color: #ddd; /* Texto claro sobre fondo oscuro */
 }
 
 header {
   text-align: center;
   padding: 3em 1em;
-  background: transparent;
+  background: #2a2a2a;
 }
 
 header h1 {
   margin: 0;
   font-size: 2em;
-  color: #5a3c2d; /* marrón medio */
+  color: #fff;
 }
 
 header .subtitle {
   font-size: 1em;
   margin-top: 0.5em;
   font-weight: 400;
-  color: #7a5843; /* marrón más claro */
+  color: #ccc;
 }
 
-/* NAVBAR minimalista, botones cálidos */
+/* NAVBAR */
 .navbar {
-  background: rgba(255,255,255,0.7);
+  background: #2a2a2a;
   padding: 1em 0;
   text-align: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
 }
 
 .navbar ul {
@@ -52,17 +52,17 @@ header .subtitle {
   font-weight: 500;
   font-size: 0.95em;
   padding: 0.6em 1em;
-  background: #fde3c6;
-  border: 1px solid #fcd5ac;
+  background: #3a3a3a;
+  border: 1px solid #444;
   border-radius: 4px;
-  color: #4a3320;
+  color: #ddd;
   transition: background 0.3s, border-color 0.3s;
 }
 
 .navbar ul li a:hover {
-  background: #fcd5ac;
-  border-color: #fcb982;
-  color: #3e2b1c;
+  background: #444;
+  border-color: #555;
+  color: #fff;
 }
 
 /* MAIN */
@@ -70,21 +70,21 @@ main {
   max-width: 1000px;
   margin: 2em auto;
   padding: 2em;
-  background: rgba(255,255,255,0.8);
+  background: #2a2a2a;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 main h2 {
   font-size: 1.6em;
-  color: #5a3c2d;
-  border-bottom: 2px solid #fcb982;
+  color: #fff;
+  border-bottom: 2px solid #555;
   padding-bottom: 0.3em;
   margin-top: 2em;
 }
 
 main h3 {
-  color: #5a3c2d;
+  color: #ddd;
   margin-top: 1.5em;
 }
 
@@ -92,7 +92,7 @@ main h3 {
 article ul {
   margin-left: 1.5em;
   list-style: disc;
-  color: #4a3320;
+  color: #ccc;
 }
 
 article li {
@@ -100,14 +100,14 @@ article li {
 }
 
 strong {
-  color: #3e2b1c;
+  color: #fff;
 }
 
 /* CODIGO */
 pre, code {
   font-family: Consolas, Monaco, 'Courier New', monospace;
-  background: #fdf4e9; /* tono marfil claro */
-  color: #4a3320;
+  background: #1e1e1e;
+  color: #eee;
   font-size: 0.95em;
   line-height: 1.4em;
   border-radius: 5px;
@@ -117,7 +117,7 @@ pre {
   padding: 1em;
   overflow-x: auto;
   margin: 1em 0;
-  border: 1px solid #fcd5ac;
+  border: 1px solid #333;
 }
 
 code {
@@ -128,26 +128,70 @@ code {
 
 /* ENLACES EN CONTENIDO */
 main a {
-  color: #5a3c2d;
+  color: #a0a0ff;
   text-decoration: none;
-  border-bottom: 1px dotted #5a3c2d;
+  border-bottom: 1px dotted #a0a0ff;
   transition: color 0.3s, border-bottom-color 0.3s;
 }
 
 main a:hover {
-  color: #3e2b1c;
-  border-bottom-color: #3e2b1c;
+  color: #ffd080;
+  border-bottom-color: #ffd080;
 }
 
 /* FOOTER */
 footer {
   text-align: center;
   padding: 1em;
-  background: rgba(255,255,255,0.7);
-  color: #4a3320;
-  border-top: 1px solid #fcd5ac;
+  background: #2a2a2a;
+  color: #aaa;
+  border-top: 1px solid #444;
   margin-top: 4em;
   font-size: 0.9em;
+}
+
+/* EJERCICIO INTERACTIVO */
+.ejercicio-section {
+  margin-top: 3em;
+}
+
+.code-container {
+  margin-bottom: 1em;
+}
+
+.run-button {
+  background: #3a3a3a;
+  color: #fff;
+  border: 1px solid #444;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.run-button:hover {
+  background: #555;
+}
+
+.console-container {
+  margin-top: 1em;
+  background: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 4px;
+}
+
+.console-header {
+  background: #333;
+  padding: 0.5em;
+  border-bottom: 1px solid #444;
+  color: #bbb;
+  font-weight: 500;
+}
+
+.console-output {
+  padding: 1em;
+  min-height: 2em;
+  font-family: Consolas, Monaco, 'Courier New', monospace;
+  color: #ddd;
 }
 
 /* RESPONSIVE */
