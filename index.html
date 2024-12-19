@@ -3,114 +3,382 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Curso de Angular Retro - Inspirado en Codedex</title>
+  <title>Guía Completa de Angular</title>
   <link rel="stylesheet" href="styles.css"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Fuente pixel -->
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <!-- Fuente Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="hero-section">
-    <nav class="top-nav">
-      <div class="logo">
-        <!-- Reemplaza por tu logo -->
-        <span class="brand">Códedex Retro</span>
-      </div>
-      <ul class="main-menu">
-        <li><a href="#">Learn</a></li>
-        <li><a href="#">Practice</a></li>
-        <li><a href="#">Community</a></li>
-        <li><a href="#">Pricing</a></li>
-      </ul>
-      <button class="sign-up-btn">Sign Up</button>
-    </nav>
-    <div class="hero-content">
-      <span class="course-level">BEGINNER COURSE</span>
-      <h1>Angular</h1>
-      <p class="hero-subtitle">Aprende componentes, servicios y enrutamiento para crear aplicaciones web dinámicas y escalables.</p>
-      <button class="start-button">Start Learning for Free</button>
+  <header>
+    <div class="header-container">
+      <h1>Introducción y Guía Completa de Angular</h1>
+      <p class="subtitle">Del Hola Mundo a la creación de una aplicación completa</p>
     </div>
   </header>
 
-  <div class="main-container">
-    <div class="course-content">
-      <div class="chapter">
-        <div class="chapter-header">
-          <span class="chapter-number">1</span>
-          <h2>Introducción a Angular</h2>
-        </div>
-        <div class="chapter-body">
-          <p>Aprende a escribir tu primer componente, entender la arquitectura del framework y el ciclo de vida de tu aplicación.</p>
-          <div class="exercises">
-            <div class="exercise">
-              <span class="exercise-title">Exercise 1</span>
-              <span class="exercise-name">Set Up</span>
-              <button class="start-exercise">Start</button>
-            </div>
-            <div class="exercise locked">
-              <span class="exercise-title">Exercise 2</span>
-              <span class="exercise-name">Hello World</span>
-              <span class="locked-icon">???</span>
-            </div>
-            <div class="exercise locked">
-              <span class="exercise-title">Exercise 3</span>
-              <span class="exercise-name">Components</span>
-              <span class="locked-icon">???</span>
-            </div>
-            <!-- Añade más ejercicios según necesites -->
-          </div>
-          <div class="bonus">
-            <span>Bonus Article</span>
-            <span>Completa el capítulo para desbloquear</span>
-          </div>
-        </div>
-      </div>
+  <nav class="sidebar">
+    <h2>Índice</h2>
+    <ul>
+      <li><a href="#justificacion">1. Justificación del Framework</a></li>
+      <li><a href="#instalacion">2. Instalación</a></li>
+      <li><a href="#primeros-pasos">3. Primeros pasos</a></li>
+      <li><a href="#utilizacion">4. Utilización del Framework</a></li>
+      <li><a href="#funcionamiento">5. Funcionamiento Interno</a></li>
+      <li><a href="#conclusiones">6. Conclusiones</a></li>
+      <li><a href="#ejemplo-practico">7. Ejemplo Práctico: Creando una App Angular con Rutas y Servicios</a></li>
+      <li><a href="#recursos">Recursos Adicionales</a></li>
+    </ul>
+  </nav>
 
-      <div class="chapter">
-        <div class="chapter-header">
-          <span class="chapter-number">2</span>
-          <h2>Enrutamiento</h2>
-        </div>
-        <!-- Contenido simulado -->
-      </div>
+  <main>
+    <!-- 1. Justificación del Framework -->
+    <section id="justificacion">
+      <h2>1. Justificación del Framework</h2>
 
-      <!-- Más capítulos... -->
-    </div>
+      <article>
+        <h3>¿Para qué sirve Angular?</h3>
+        <p><strong>Angular</strong> es un framework de desarrollo web mantenido por Google, orientado a la construcción de aplicaciones robustas, escalables y modernas del lado del cliente. Sirve para:</p>
+        <ul>
+          <li>Crear aplicaciones de una sola página (SPAs) con una experiencia de usuario fluida.</li>
+          <li>Desarrollar interfaces complejas, mantenibles y organizadas.</li>
+          <li>Optimizar el tiempo de desarrollo gracias a su arquitectura modular y herramientas integradas.</li>
+        </ul>
+      </article>
 
-    <aside class="sidebar">
-      <div class="user-profile">
-        <img class="user-avatar" src="https://via.placeholder.com/60" alt="Avatar">
-        <div class="user-info">
-          <span class="user-name">Your Name</span>
-          <span class="user-level">Level 1</span>
-        </div>
-        <button class="view-profile">View Profile</button>
-      </div>
+      <article>
+        <h3>¿Qué aplicaciones tiene?</h3>
+        <p>Angular se utiliza en una amplia gama de soluciones:</p>
+        <ul>
+          <li>Sistemas internos de gestión empresarial, paneles de administración y dashboards.</li>
+          <li>Aplicaciones de e-commerce interactivas.</li>
+          <li>Aplicaciones de educación en línea y plataformas de e-learning.</li>
+          <li>Aplicaciones móviles híbridas con Ionic.</li>
+          <li>Aplicaciones escalables de misión crítica, gracias a su arquitectura sólida.</li>
+        </ul>
+      </article>
 
-      <div class="course-progress">
-        <h3>Course Progress</h3>
-        <p>Exercises: 0/44</p>
-        <p>Projects Completed: 0/2</p>
-        <p>XP Earned: 0/765</p>
-      </div>
+      <article>
+        <h3>¿Sobre qué lenguajes se apoya?</h3>
+        <p>Angular se sustenta sobre:</p>
+        <ul>
+          <li><strong>TypeScript:</strong> Lenguaje clave para la lógica y la programación, un superconjunto tipado de JavaScript.</li>
+          <li><strong>HTML:</strong> Para las plantillas de los componentes y estructura de la interfaz.</li>
+          <li><strong>CSS/SCSS:</strong> Para el estilo y la presentación visual de la aplicación.</li>
+        </ul>
+      </article>
 
-      <div class="course-badges">
-        <h3>Course Badges</h3>
-        <p>Complete a chapter to earn a badge</p>
-        <div class="badges-grid">
-          <!-- Placeholder for badges -->
-          <div class="badge-slot">?</div>
-          <div class="badge-slot">?</div>
-          <div class="badge-slot">?</div>
-          <div class="badge-slot">?</div>
-        </div>
-      </div>
-    </aside>
-  </div>
+      <article>
+        <h3>¿Qué prerrequisitos necesita?</h3>
+        <p>Para iniciar con Angular se recomienda:</p>
+        <ul>
+          <li>Conocimientos básicos de HTML, CSS y JavaScript.</li>
+          <li>Familiaridad con TypeScript, o disposición para aprenderlo.</li>
+          <li>Tener instalado Node.js y npm.</li>
+          <li>Entender el concepto de componentes, servicios, enrutamiento y arquitectura de aplicaciones web.</li>
+        </ul>
+      </article>
+    </section>
 
-  <footer class="retro-footer">
-    <p>© 2024 - Inspirado en Codedex - Retro Angular Course</p>
+    <!-- 2. Instalación -->
+    <section id="instalacion">
+      <h2>2. Instalación</h2>
+
+      <article>
+        <h3>¿Se precisa instalación?</h3>
+        <p>Sí. Es necesario instalar <strong>Node.js</strong> (que incluye npm) y el <strong>Angular CLI</strong> (Interface de Línea de Comandos) para crear, compilar y servir proyectos Angular de forma sencilla.</p>
+      </article>
+
+      <article>
+        <h3>Pasos para la instalación</h3>
+        <p><strong>En Windows:</strong></p>
+        <ol>
+          <li>Descargar e instalar la versión LTS de Node.js desde <a href="https://nodejs.org" target="_blank">nodejs.org</a>.</li>
+          <li>Abrir el "Símbolo del sistema" o "PowerShell" y verificar la instalación:
+            <pre><code>node -v
+npm -v</code></pre>
+          </li>
+          <li>Instalar Angular CLI globalmente:
+            <pre><code>npm install -g @angular/cli</code></pre>
+          </li>
+        </ol>
+
+        <p><strong>En macOS/Linux:</strong></p>
+        <ol>
+          <li>Instalar Node.js (usando el paquete oficial o un gestor como nvm):
+            <pre><code>node -v
+npm -v</code></pre>
+          </li>
+          <li>Instalar Angular CLI:
+            <pre><code>sudo npm install -g @angular/cli</code></pre>
+          </li>
+        </ol>
+      </article>
+
+      <article>
+        <h3>Versiones necesarias</h3>
+        <p>Se recomienda usar la versión LTS de Node.js (por ejemplo, Node 18 LTS) y la última versión estable de Angular para garantizar compatibilidad y soporte.</p>
+      </article>
+
+      <article>
+        <h3>Rutas a tener en cuenta</h3>
+        <p>Al crear un proyecto con Angular CLI (<code>ng new</code>), se genera una estructura base:</p>
+        <ul>
+          <li><code>src/app</code>: Código principal de la aplicación (componentes, servicios, módulos).</li>
+          <li><code>src/assets</code>: Archivos estáticos (imágenes, fuentes).</li>
+          <li><code>src/environments</code>: Configuraciones para diferentes entornos (dev, prod).</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>Variables de entorno</h3>
+        <p>Angular no requiere variables de entorno obligatorias. Sin embargo, puedes configurar endpoints de APIs u otras variables mediante los archivos en <code>src/environments</code> y definir distintas configuraciones para desarrollo, producción, etc.</p>
+      </article>
+
+      <article>
+        <h3>¿Necesita base de datos?</h3>
+        <p>No directamente. Angular es un framework frontend y no se conecta a la base de datos por sí mismo. En su lugar, consume servicios o APIs REST/GraphQL. Puedes usar servicios mock, APIs de terceros o crear tu propio backend separado.</p>
+      </article>
+    </section>
+
+    <!-- 3. Primeros pasos -->
+    <section id="primeros-pasos">
+      <h2>3. Primeros pasos</h2>
+
+      <article>
+        <h3>Creando un “Hola Mundo”</h3>
+        <p>Con Angular CLI instalado, crear un nuevo proyecto es sencillo:</p>
+        <pre><code>ng new mi-primera-app
+cd mi-primera-app
+ng serve --open</code></pre>
+        <p>Esto abrirá el navegador en <a href="http://localhost:4200" target="_blank">http://localhost:4200</a> mostrando la página inicial de Angular, que podemos considerar nuestro "Hola Mundo".</p>
+      </article>
+    </section>
+
+    <!-- 4. Utilización del framework -->
+    <section id="utilizacion">
+      <h2>4. Utilización del Framework</h2>
+
+      <article>
+        <h3>¿Cómo empezar a crear una aplicación base?</h3>
+        <p>La estructura creada por <code>ng new</code> ya incluye un componente principal llamado <code>AppComponent</code>. En <code>src/app/app.component.html</code> puedes editar el texto para personalizar el mensaje de bienvenida:</p>
+        <pre><code>&lt;h1&gt;¡Hola Mundo desde Angular!&lt;/h1&gt;</code></pre>
+      </article>
+
+      <article>
+        <h3>¿Cómo visualizar los resultados?</h3>
+        <p>Con el comando <code>ng serve --open</code> la aplicación se recarga automáticamente al guardar cambios. Para visualizar en producción, se usa:</p>
+        <pre><code>ng build --configuration production</code></pre>
+        <p>Esto genera la carpeta <code>dist</code> lista para desplegar en un hosting estático.</p>
+      </article>
+    </section>
+
+    <!-- 5. Explicación del funcionamiento del framework -->
+    <section id="funcionamiento">
+      <h2>5. Explicación del Funcionamiento del Framework</h2>
+
+      <article>
+        <h3>¿Actúa sobre páginas, ficheros, secciones…?</h3>
+        <p>Angular organiza el frontend en <strong>componentes</strong>. Cada componente tiene:</p>
+        <ul>
+          <li>Un archivo TypeScript (<code>.ts</code>) con la lógica.</li>
+          <li>Un archivo HTML (<code>.html</code>) con la plantilla de la vista.</li>
+          <li>Un archivo CSS/SCSS (<code>.css</code>) para el estilo.</li>
+        </ul>
+        <p>Estos componentes se agrupan en <strong>módulos</strong>, y la aplicación se considera una SPA, con enrutamiento interno para simular múltiples páginas sin recargas completas.</p>
+      </article>
+
+      <article>
+        <h3>¿Cómo se editan/modifican los ficheros que actúan en el framework?</h3>
+        <p>Para editar un componente, simplemente ajusta el HTML, el TS o el CSS correspondientes. El framework usa data binding con <code>{{ variable }}</code>, directivas (<code>*ngIf</code>, <code>*ngFor</code>), e inyección de dependencias para servicios.</p>
+      </article>
+
+      <article>
+        <h3>¿Cómo se referencian los ficheros creados desde otras aplicaciones?</h3>
+        <p>Si necesitas integrar Angular con una aplicación mayor, usualmente el build de Angular se coloca en un servidor y se integra a través de rutas reversas o proxies. Las dependencias se gestionan con npm y el Angular CLI. Los componentes se importan en sus módulos, y los servicios se inyectan en los componentes que los requieran. Si hay recursos estáticos, se colocan en <code>assets/</code> y se acceden vía rutas relativas.</p>
+      </article>
+    </section>
+
+    <!-- 6. Conclusiones -->
+    <section id="conclusiones">
+      <h2>6. Conclusiones</h2>
+      <p>A lo largo de este tutorial se han presentado las bases para entender qué es Angular, para qué sirve, cómo se instala, cómo iniciar un proyecto y cómo estructurar su código. Con esto se sientan las bases para profundizar y comenzar a desarrollar aplicaciones completas.</p>
+      <p>Se han logrado los objetivos propuestos: comprender la razón de ser del framework, sus casos de uso, el entorno necesario, los primeros pasos, la estructura del proyecto y el funcionamiento interno. Estas nociones iniciales permitirán al lector abordar proyectos más complejos y sacar provecho de las numerosas capacidades de Angular.</p>
+    </section>
+
+    <!-- 7. Ejemplo Práctico -->
+    <section id="ejemplo-practico">
+      <h2>7. Ejemplo Práctico: Creando una App Angular con Rutas y Servicios</h2>
+
+      <article>
+        <h3>Visión General</h3>
+        <p>Ahora iremos un paso más allá y mostraremos cómo crear una aplicación sencilla que incluya:</p>
+        <ul>
+          <li>Enrutamiento interno (SPA) con varias páginas: <code>/home</code>, <code>/about</code>, <code>/users</code>.</li>
+          <li>Un servicio para manejar datos de usuarios.</li>
+          <li>Componentes adicionales para mostrar una lista de usuarios y detalles de uno en particular.</li>
+        </ul>
+        <p>Este ejemplo provee una idea clara de cómo estructurar una app real usando Angular.</p>
+      </article>
+
+      <article>
+        <h3>Creando el Proyecto con Rutas</h3>
+        <p>Suponiendo que ya tenemos un proyecto base (creado con <code>ng new mi-segunda-app</code>), habilitaremos el enrutamiento si no se hizo inicialmente:</p>
+        <pre><code>ng generate module app-routing --flat --module=app</code></pre>
+        <p>Esto crea <code>app-routing.module.ts</code>, donde definiremos nuestras rutas.</p>
+      </article>
+
+      <article>
+        <h3>Definiendo las Rutas</h3>
+        <pre><code>import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { UsersListComponent } from './users/users-list.component';
+import { UserDetailComponent } from './users/user-detail.component';
+
+const routes: Routes = [
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
+  { path: 'about', component: AboutComponent },
+  { path: 'users', component: UsersListComponent },
+  { path: 'users/:id', component: UserDetailComponent }
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
+</code></pre>
+      </article>
+
+      <article>
+        <h3>Creando Componentes</h3>
+        <p>Generamos los componentes para las distintas secciones:</p>
+        <pre><code>ng generate component home
+ng generate component about
+ng generate component users/users-list
+ng generate component users/user-detail
+</code></pre>
+
+        <p>Por ejemplo, en <code>users-list.component.html</code>:</p>
+        <pre><code>&lt;h2&gt;Lista de Usuarios&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li *ngFor="let user of users" (click)="goToUserDetail(user.id)"&gt;{{ user.name }}&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+      </article>
+
+      <article>
+        <h3>Creando un Servicio para Datos</h3>
+        <p>Utilizamos servicios para aislar la lógica de obtención de datos:</p>
+        <pre><code>ng generate service users/users</code></pre>
+
+        <p>En <code>users.service.ts</code>:</p>
+        <pre><code>import { Injectable } from '@angular/core';
+
+@Injectable({ providedIn: 'root' })
+export class UsersService {
+  private mockUsers = [
+    { id: 1, name: 'Alice', info: 'Desarrolladora Frontend' },
+    { id: 2, name: 'Bob', info: 'Diseñador UI/UX' },
+    { id: 3, name: 'Charlie', info: 'QA y Tester' }
+  ];
+
+  getUsers() {
+    return this.mockUsers;
+  }
+
+  getUserById(id: number) {
+    return this.mockUsers.find(u => u.id === id);
+  }
+}
+</code></pre>
+      </article>
+
+      <article>
+        <h3>Integración en los Componentes</h3>
+        <p>En <code>users-list.component.ts</code>:</p>
+        <pre><code>import { Component, OnInit } from '@angular/core';
+import { UsersService } from './users.service';
+import { Router } from '@angular/router';
+
+@Component({
+  selector: 'app-users-list',
+  templateUrl: './users-list.component.html',
+  styleUrls: ['./users-list.component.css']
+})
+export class UsersListComponent implements OnInit {
+  users: any[] = [];
+
+  constructor(private usersService: UsersService, private router: Router) {}
+
+  ngOnInit(): void {
+    this.users = this.usersService.getUsers();
+  }
+
+  goToUserDetail(id: number): void {
+    this.router.navigate(['/users', id]);
+  }
+}
+</code></pre>
+
+        <p>En <code>user-detail.component.ts</code> para mostrar datos de un usuario específico:</p>
+        <pre><code>import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { UsersService } from './users.service';
+
+@Component({
+  selector: 'app-user-detail',
+  template: `
+    &lt;h2&gt;Detalles del Usuario&lt;/h2&gt;
+    &lt;div *ngIf="user"&gt;
+      &lt;h3&gt;{{ user.name }}&lt;/h3&gt;
+      &lt;p&gt;{{ user.info }}&lt;/p&gt;
+    &lt;/div&gt;
+  `
+})
+export class UserDetailComponent implements OnInit {
+  user: any;
+
+  constructor(private route: ActivatedRoute, private usersService: UsersService) {}
+
+  ngOnInit(): void {
+    const id = Number(this.route.snapshot.paramMap.get('id'));
+    this.user = this.usersService.getUserById(id);
+  }
+}
+</code></pre>
+      </article>
+
+      <article>
+        <h3>Ejecutando la Aplicación</h3>
+        <p>Ejecutar <code>ng serve --open</code> y navegar a <code>http://localhost:4200/home</code>. Desde ahí, moverse a <code>/about</code> y <code>/users</code>. Al hacer clic en un usuario, se irá a su página de detalles <code>/users/:id</code>.</p>
+        <p>Este ejemplo práctico demuestra cómo Angular gestiona la navegación interna, la comunicación con servicios y el renderizado dinámico de datos.</p>
+      </article>
+
+      <article>
+        <h3>Conclusión de la Parte Práctica</h3>
+        <p>Esta segunda parte muestra una aplicación Angular con mayor complejidad, utilizando componentes, enrutamiento y servicios. Con este conocimiento, es posible abordar proyectos reales, integrando APIs externas, autenticación, formularios complejos, pruebas automatizadas y más.</p>
+      </article>
+    </section>
+
+    <!-- Recursos Adicionales -->
+    <section id="recursos">
+      <h2>Recursos Adicionales</h2>
+      <ul>
+        <li><a href="https://angular.io/" target="_blank">Documentación Oficial de Angular</a></li>
+        <li><a href="https://www.typescriptlang.org/" target="_blank">Documentación de TypeScript</a></li>
+        <li><a href="https://angular.io/cli" target="_blank">Angular CLI Documentation</a></li>
+        <li><a href="https://www.freecodecamp.org/espanol/" target="_blank">FreeCodeCamp en Español</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2024 - Guía Completa de Angular. Ejemplo de Tutorial HTML+CSS.</p>
   </footer>
 </body>
 </html>
