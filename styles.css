@@ -9,143 +9,290 @@ html, body {
 
 a {
   text-decoration: none;
-  color: #ffec27; /* Amarillo neon */
+  color: #73dfff;
 }
 
 a:hover {
-  color: #73dfff; /* Azul claro */
-}
-
-.retro-header {
-  background: linear-gradient(135deg, #0f0f1f 40%, #181830);
-  text-align: center;
-  padding: 2em 1em;
-  border-bottom: 2px solid #444;
-}
-
-.retro-header h1 {
-  margin: 0;
-  font-size: 1.4em;
   color: #ffec27;
-  text-shadow: 0 0 5px #ffec27;
 }
 
-.retro-header .subtitle {
-  margin-top: 0.5em;
-  color: #ccc;
-  font-size: 0.9em;
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
 }
 
-.retro-button {
-  display: inline-block;
-  margin-top: 1em;
-  background: #181830;
+.logo .brand {
   color: #ffec27;
-  border: 2px solid #ffec27;
-  padding: 0.5em 1em;
-  border-radius: 0;
-  cursor: pointer;
-  box-shadow: none;
+  font-size: 1em;
+}
+
+.main-menu {
+  list-style: none;
+  display: flex;
+  gap: 2em;
+}
+
+.main-menu li a {
+  color: #ddd;
   font-size: 0.8em;
 }
 
-.retro-button:hover {
+.main-menu li a:hover {
+  color: #ffec27;
+}
+
+.sign-up-btn {
+  background: #181830;
+  color: #ffec27;
+  border: 1px solid #ffec27;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  font-size: 0.7em;
+}
+
+.sign-up-btn:hover {
   background: #ffec27;
   color: #181830;
 }
 
-.retro-navbar {
-  background: #181830;
+.hero-section {
+  background: url('https://cdn.pixilart.com/photos/large/8bd663a45f90970.png') no-repeat center center;
+  background-size: cover;
   border-bottom: 2px solid #444;
+  position: relative;
+}
+
+.hero-content {
+  text-align: center;
+  padding: 4em 1em 2em;
+  background: rgba(0,0,0,0.5);
+}
+
+.course-level {
+  display: inline-block;
+  background: #181830;
+  padding: 0.3em 0.6em;
+  color: #73dfff;
+  font-size: 0.7em;
+  margin-bottom: 1em;
+}
+
+.hero-content h1 {
+  margin: 0.3em 0;
+  font-size: 2em;
+  color: #ffec27;
+  text-shadow: 0 0 5px #ffec27;
+}
+
+.hero-subtitle {
+  color: #ccc;
+  font-size: 0.8em;
+  margin-bottom: 2em;
+}
+
+.start-button {
+  background: #ffec27;
+  color: #181830;
+  padding: 0.8em 1.2em;
+  border: none;
+  cursor: pointer;
+  font-size: 0.8em;
+}
+
+.start-button:hover {
+  background: #e5d300;
+}
+
+.main-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 2em auto;
+  padding: 0 1em;
+  gap: 2em;
+}
+
+.course-content {
+  flex: 3;
+}
+
+.chapter {
+  background: #181830;
+  margin-bottom: 2em;
+  padding: 1em;
+  border: 1px solid #333;
+}
+
+.chapter-header {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-bottom: 1em;
+}
+
+.chapter-number {
+  background: #0f0f1f;
+  border: 2px solid #333;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  color: #ffec27;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7em;
+}
+
+.chapter-header h2 {
+  font-size: 1em;
+  color: #fff;
+}
+
+.chapter-body p {
+  font-size: 0.8em;
+  color: #ccc;
+  margin-bottom: 1em;
+}
+
+.exercises {
+  background: #0f0f1f;
+  border: 1px solid #333;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
+.exercise {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8em;
+  margin-bottom: 0.5em;
+  color: #ddd;
+}
+
+.exercise .exercise-title {
+  margin-right: 1em;
+  color: #73dfff;
+}
+
+.start-exercise {
+  background: #73dfff;
+  color: #0f0f1f;
+  border: none;
+  padding: 0.3em 0.5em;
+  cursor: pointer;
+  font-size: 0.7em;
+}
+
+.start-exercise:hover {
+  background: #5ac0e6;
+}
+
+.exercise.locked .locked-icon {
+  background: #333;
+  color: #666;
+  padding: 0.3em;
+  border-radius: 2px;
+}
+
+.bonus {
+  font-size: 0.7em;
+  color: #bbb;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sidebar {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.user-profile {
+  background: #181830;
+  border: 1px solid #333;
   padding: 1em;
   text-align: center;
 }
 
-.retro-navbar ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: inline-flex;
-  gap: 1em;
+.user-avatar {
+  border-radius: 50%;
+  margin-bottom: 0.5em;
+}
+
+.user-info {
+  margin-bottom: 1em;
+}
+
+.user-name {
+  display: block;
+  color: #ffec27;
+  font-size: 0.9em;
+}
+
+.user-level {
+  font-size: 0.7em;
+  color: #ccc;
+}
+
+.view-profile {
+  background: #73dfff;
+  border: none;
+  color: #0f0f1f;
+  padding: 0.5em 1em;
+  font-size: 0.7em;
+  cursor: pointer;
+}
+
+.view-profile:hover {
+  background: #5ac0e6;
+}
+
+.course-progress, .course-badges {
+  background: #181830;
+  border: 1px solid #333;
+  padding: 1em;
+  font-size: 0.7em;
+}
+
+.course-progress h3, .course-badges h3 {
+  font-size: 0.8em;
+  margin-bottom: 1em;
+  color: #73dfff;
+}
+
+.badges-grid {
+  display: flex;
+  gap: 0.5em;
   flex-wrap: wrap;
 }
 
-.retro-navbar ul li {
-  margin: 0;
-}
-
-.retro-main {
-  max-width: 800px;
-  margin: 2em auto;
-  padding: 1em;
-}
-
-.retro-main h2 {
-  font-size: 1.2em;
-  color: #ffec27;
-  border-bottom: 2px solid #ffec27;
-  padding-bottom: 0.3em;
-  margin-top: 2em;
-}
-
-.retro-card {
-  background: #1f1f2f;
-  border: 2px solid #333;
-  padding: 1em;
-  margin-top: 1em;
-  box-shadow: inset 0 0 5px #000;
-}
-
-.retro-card code {
-  background: #2f2f3f;
-  color: #ffec27;
-  padding: 0.2em 0.4em;
-  display: inline-block;
-  margin: 0 0.2em;
-}
-
-.retro-console {
+.badge-slot {
   background: #0f0f1f;
-  border: 2px solid #444;
-  margin-top: 1em;
-  font-family: Consolas, Monaco, monospace;
-}
-
-.retro-console-header {
-  background: #181830;
-  padding: 0.5em;
-  border-bottom: 2px solid #444;
-  color: #ffec27;
-  font-size: 0.8em;
-}
-
-.retro-console-output {
-  padding: 1em;
-  min-height: 2em;
-  color: #73dfff;
+  border: 1px solid #333;
+  width: 30px;
+  height: 30px;
+  color: #444;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7em;
 }
 
 .retro-footer {
   text-align: center;
   padding: 1em;
   background: #181830;
-  color: #ccc;
-  border-top: 2px solid #444;
+  color: #aaa;
+  border-top: 1px solid #444;
+  font-size: 0.7em;
   margin-top: 2em;
-  font-size: 0.8em;
 }
 
-@media (max-width: 600px) {
-  .retro-navbar ul {
+@media (max-width: 800px) {
+  .main-container {
     flex-direction: column;
-    gap: 0.5em;
-  }
-
-  .retro-header h1 {
-    font-size: 1em;
-  }
-
-  .retro-main {
-    padding: 0.5em;
   }
 }
